@@ -1,0 +1,589 @@
+type,category,meal,source,section,ingredient,amount,units,notes
+dessert,dessert,apple and olive oil cake with maple frosting,sweet 132,dairy,cream cheese,225,g,Recipe From Megan
+dessert,dessert,apple and olive oil cake with maple frosting,sweet 132,dairy,eggs,4,items,Recipe From Megan
+dessert,dessert,apple and olive oil cake with maple frosting,sweet 132,east pantry,golden raisins,100,g,Recipe From Megan
+dessert,dessert,apple and olive oil cake with maple frosting,sweet 132,produce,lemons,1,items,Recipe From Megan
+dessert,dessert,apple and olive oil cake with maple frosting,sweet 132,west pantry,maple syrup,85,ml,Recipe From Megan
+dessert,dessert,apple and olive oil cake with maple frosting,sweet 132,produce,tart apples,900,g,Recipe From Megan
+dessert,dessert,apple and olive oil cake with maple frosting,sweet 132,dairy,unsalted butter,100,g,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,produce,avocados,2,items,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,east pantry,capers,1,tbsp,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,produce,cherry tomatoes (fresh),200,g,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,dairy,crusty bread,300,g,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,produce,dill,10,g,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,produce,garlic,1,cloves,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,produce,limes,2,items,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,produce,tarragon,10,g,Recipe From Megan
+dinner,light veg dishes,avocado butter on toast with tomato salsa,simple 14,dairy,unsalted butter,60,g,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,dairy,feta,150,g,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,produce,garlic,1,cloves,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,east pantry,green olives,40,g,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,produce,mint,40,g,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,produce,mint,10,g,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,produce,pomegranate seeds,90,g,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,dairy,unsalted butter,50,g,Recipe From Megan
+dinner,served with rice,baked mint rice with pomegranate and olive salsa,simple 171,bulk barn,walnut pieces,50,g,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,west pantry,anchovies,3,items,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,west pantry,artichoke hearts,280,g,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,produce,basil,5,g,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,east pantry,canned tomatoes,400,g,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,east pantry,capers,2,tbsp,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,produce,garlic,6,cloves,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,east pantry,kalamata olives,70,g,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,produce,onions,1,items,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,east pantry,pasta (orzo),250,g,Recipe From Megan
+dinner,pasta,baked orzo puttanesca,otk 114,west pantry,preserved lemon,1,items,Recipe From Megan
+dinner,served with rice,baked rice with confit tomatoes and garlic,simple 174,produce,cherry tomatoes (fresh),800,g,Recipe From Megan
+dinner,served with rice,baked rice with confit tomatoes and garlic,simple 174,produce,cilantro,35,g,Recipe From Megan
+dinner,served with rice,baked rice with confit tomatoes and garlic,simple 174,produce,fresh thyme,2,g,Recipe From Megan
+dinner,served with rice,baked rice with confit tomatoes and garlic,simple 174,produce,garlic,12,cloves,Recipe From Megan
+dinner,served with rice,baked rice with confit tomatoes and garlic,simple 174,produce,shallots,4,items,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,east pantry,canned tomatoes,400,g,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,produce,celery,2,stalks,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,dairy,feta,300,g,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,produce,fresh oregano,3,sprigs,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,produce,fresh thyme,5,g,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,produce,garlic,4,cloves,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,produce,lemons,1,items,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,east pantry,passata,300,ml,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,west pantry,pearl barley,200,g,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,produce,shallots,2,items,Recipe From Megan
+dinner,pasta,barley risotto with marinated feta,jerusalem 109,dairy,unsalted butter,30,g,Recipe From Megan
+basics,basics,basics,NA,produce,bananas,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,bread,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,brie,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,cheddar,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,eggs,12,for the week,Recipe From Megan
+basics,basics,basics,NA,produce,frozen fruit,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,milk,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,oat milk,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,salted butter,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,unsalted butter,1,for the week,Recipe From Megan
+basics,basics,basics,NA,dairy,yogurt,2,for the week,Recipe From Megan
+dinner,light veg dishes,beefsteak tomato carpaccio,simple 29,produce,cilantro,5,g,Recipe From Megan
+dinner,light veg dishes,beefsteak tomato carpaccio,simple 29,produce,ginger,1,g,Recipe From Megan
+dinner,light veg dishes,beefsteak tomato carpaccio,simple 29,produce,green chiles,0.25,items,Recipe From Megan
+dinner,light veg dishes,beefsteak tomato carpaccio,simple 29,produce,green onions,4,items,Recipe From Megan
+dinner,light veg dishes,beefsteak tomato carpaccio,simple 29,produce,tomatoes (fresh),400,g,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,west pantry,butter beans,700,g,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,cilantro,100,g,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,garlic,5,cloves,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,jalapenos,1,items,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,lemons,2,items,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,onions,1,items,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,parsley,30,g,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,potatoes,500,g,Recipe From Megan
+dinner,bean and lentil dishes,"bkeila, potato, and butter bean stew",flavor 75,produce,spinach,600,g,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,produce,ancho chile,1,items,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,west pantry,black beans,350,g,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,produce,chiles,2,items,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,produce,fresh coconut,1,small,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,produce,garlic,4,cloves,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,produce,limes,1,items,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,produce,makrut lime leaves,10,items,Recipe From Megan
+dinner,beans,"black beans with coconut, chile, and lime",flavor 86,produce,shallots,2,items,Recipe From Megan
+dinner,other meals,braised eggs with leek and zaatar,simple 6,produce,baby spinach,200,g,Recipe From Megan
+dinner,other meals,braised eggs with leek and zaatar,simple 6,dairy,eggs,6,items,Recipe From Megan
+dinner,other meals,braised eggs with leek and zaatar,simple 6,dairy,feta,90,g,Recipe From Megan
+dinner,other meals,braised eggs with leek and zaatar,simple 6,produce,leeks,4,items,Recipe From Megan
+dinner,other meals,braised eggs with leek and zaatar,simple 6,west pantry,preserved lemon,0.5,items,Recipe From Megan
+dinner,other meals,braised eggs with leek and zaatar,simple 6,dairy,unsalted butter,40,g,Recipe From Megan
+dinner,veg with grains,bulgur with mushrooms and feta,simple 164,west pantry,bulgur,150,g,Recipe From Megan
+dinner,veg with grains,bulgur with mushrooms and feta,simple 164,produce,dill,10,g,Recipe From Megan
+dinner,veg with grains,bulgur with mushrooms and feta,simple 164,dairy,feta,60,g,Recipe From Megan
+dinner,veg with grains,bulgur with mushrooms and feta,simple 164,produce,fresh thyme,5,g,Recipe From Megan
+dinner,veg with grains,bulgur with mushrooms and feta,simple 164,produce,mixed mushrooms,500,g,Recipe From Megan
+dinner,veg with grains,bulgur with mushrooms and feta,simple 164,produce,onions,1,items,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,west pantry,bulgur,250,g,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,produce,cherry tomatoes,400,g,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,produce,eggplants,2,items,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,produce,garlic,3,cloves,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,produce,mint,10,g,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,produce,onions,2,items,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,west pantry,preserved lemon,1,items,Recipe From Megan
+dinner,veg with grains,"bulgur with tomato, eggplant, and lemon yogurt",simple 162,dairy,yogurt,200,g,Recipe From Megan
+dinner,light veg dishes,burrata with grilled grapes and basil,simple 43,produce,basil,5,g,Recipe From Megan
+dinner,light veg dishes,burrata with grilled grapes and basil,simple 43,dairy,burrata,600,g,Recipe From Megan
+dinner,light veg dishes,burrata with grilled grapes and basil,simple 43,produce,garlic,1,cloves,Recipe From Megan
+dinner,light veg dishes,burrata with grilled grapes and basil,simple 43,produce,grapes,320,g,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,west pantry,bulgur,150,g,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,produce,cilantro,10,g,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,produce,eggplants,2,items,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,produce,garlic,2,cloves,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,east pantry,golden raisins,50,g,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,dairy,greek yogurt,120,g,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,produce,lemons,0.5,items,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,produce,mint,10,g,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,east pantry,pitted green olives,50,g,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,west pantry,preserved lemon,1,items,Recipe From Megan
+dinner,veg with grains,chermoula eggplant with bulgur and yogurt,jerusalem 59,bulk barn,sliced almonds,30,g,Recipe From Megan
+dinner,bean and lentil dishes,chickpeas cacio e pepe,otk 120,produce,baby spinach,250,g,Recipe From Megan
+dinner,bean and lentil dishes,chickpeas cacio e pepe,otk 120,west pantry,chickpeas,300,g,Recipe From Megan
+dinner,bean and lentil dishes,chickpeas cacio e pepe,otk 120,produce,garlic,8,cloves,Recipe From Megan
+dinner,bean and lentil dishes,chickpeas cacio e pepe,otk 120,produce,jalapenos,1,items,Recipe From Megan
+dinner,bean and lentil dishes,chickpeas cacio e pepe,otk 120,produce,parsley,15,g,Recipe From Megan
+dinner,bean and lentil dishes,chickpeas cacio e pepe,otk 120,dairy,unsalted butter,100,g,Recipe From Megan
+dessert,dessert,chocolate chip and pecan cookies,sweet 26,bulk barn,chocolate chunks,260,g,Recipe From Megan
+dessert,dessert,chocolate chip and pecan cookies,sweet 26,dairy,eggs,2,items,Recipe From Megan
+dessert,dessert,chocolate chip and pecan cookies,sweet 26,bulk barn,pecan pieces,120,g,Recipe From Megan
+dessert,dessert,chocolate chip and pecan cookies,sweet 26,dairy,unsalted butter,250,g,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,bean sprouts,70,g,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,cilantro,15,g,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,west pantry,coconut milk,400,ml,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,dairy,eggs,6,items,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,garlic,3,cloves,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,ginger,5,g,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,grapefruit,1,items,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,green chiles,2,items,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,green onions,5,items,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,limes,1,items,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,mint,15,g,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,radishes,70,g,Recipe From Megan
+dinner,,coconut and tumeric omelette feast,flavor 145,produce,shallots,3,items,Recipe From Megan
+dinner,served with rice,coconut rice with eggplant and pickled cucumber,east 135,west pantry,coconut milk,420,ml,Recipe From Megan
+dinner,served with rice,coconut rice with eggplant and pickled cucumber,east 135,produce,cucumbers,200,g,Recipe From Megan
+dinner,served with rice,coconut rice with eggplant and pickled cucumber,east 135,produce,eggplants,2,items,Recipe From Megan
+dinner,served with rice,coconut rice with eggplant and pickled cucumber,east 135,produce,garlic,3,cloves,Recipe From Megan
+dinner,served with rice,coconut rice with eggplant and pickled cucumber,east 135,produce,lemons,1,items,Recipe From Megan
+dinner,served with rice,coconut rice with eggplant and pickled cucumber,east 135,produce,red onions,1,items,Recipe From Megan
+dinner,pasta,"conchigle with yogurt, peas, and chile",jerusalem 111,produce,basil,40,g,Recipe From Megan
+dinner,pasta,"conchigle with yogurt, peas, and chile",jerusalem 111,dairy,feta,240,g,Recipe From Megan
+dinner,pasta,"conchigle with yogurt, peas, and chile",jerusalem 111,produce,garlic,4,cloves,Recipe From Megan
+dinner,pasta,"conchigle with yogurt, peas, and chile",jerusalem 111,dairy,greek yogurt,500,g,Recipe From Megan
+dinner,pasta,"conchigle with yogurt, peas, and chile",jerusalem 111,east pantry,pasta (conchigle),500,g,Recipe From Megan
+dinner,pasta,"conchigle with yogurt, peas, and chile",jerusalem 111,produce,peas (fresh or frozen),500,g,Recipe From Megan
+dinner,pasta,"conchigle with yogurt, peas, and chile",jerusalem 111,produce,pine nuts,60,g,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,produce,cherry tomatoes,400,g,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,west pantry,chickpeas,800,g,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,produce,cilantro,30,g,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,produce,garlic,11,cloves,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,produce,ginger,5,g,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,dairy,greek yogurt,180,g,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,produce,jalapenos,1,items,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,produce,limes,2,items,Recipe From Megan
+dinner,bean and lentil dishes,confit tandoori chickpeas,otk 105,produce,mint,15,g,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,produce,basil,5,g,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,produce,corn,3,items,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,dairy,crusty bread,200,g,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,produce,green onions,3,items,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,produce,mint,5,g,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,dairy,pecorino romano,100,g,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,bulk barn,pistachios,150,g,Recipe From Megan
+dinner,light veg dish,corn and tomato salad with torn croutons,six seasons 225,produce,tomatoes (fresh),450,g,Recipe From Megan
+dinner,pasta,cream of tomato soup with buttery onions and orecciette,otk 169,produce,basil,10,g,Recipe From Megan
+dinner,pasta,cream of tomato soup with buttery onions and orecciette,otk 169,east pantry,canned tomatoes,800,g,Recipe From Megan
+dinner,pasta,cream of tomato soup with buttery onions and orecciette,otk 169,dairy,cream,30,ml,Recipe From Megan
+dinner,pasta,cream of tomato soup with buttery onions and orecciette,otk 169,produce,garlic,2,cloves,Recipe From Megan
+dinner,pasta,cream of tomato soup with buttery onions and orecciette,otk 169,produce,onions,4,items,Recipe From Megan
+dinner,pasta,cream of tomato soup with buttery onions and orecciette,otk 169,east pantry,pasta (orecchiette),200,g,Recipe From Megan
+dinner,pasta,cream of tomato soup with buttery onions and orecciette,otk 169,dairy,unsalted butter,60,g,Recipe From Megan
+dinner,other meals,fish and oven fries with feta,simple 138,dairy,feta,150,g,Recipe From Megan
+dinner,other meals,fish and oven fries with feta,simple 138,market,fish,1,filet,Recipe From Megan
+dinner,other meals,fish and oven fries with feta,simple 138,produce,garlic,6,cloves,Recipe From Megan
+dinner,other meals,fish and oven fries with feta,simple 138,produce,potatoes,2000,g,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,west pantry,anchovies,7,items,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,produce,baby spinach,50,g,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,west pantry,chickpeas,880,g,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,produce,fresh thyme,10,g,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,produce,garlic,2,cloves,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,produce,lemons,1,items,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,produce,onions,1,items,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,produce,parsley,15,g,Recipe From Megan
+dinner,pasta,gigli with chickpeas and zaatar,simple 191,east pantry,pasta (gigli),200,g,Recipe From Megan
+dinner,other,gnocchi alla romana,simple 198,dairy,cheddar,40,g,Recipe From Megan
+dinner,other,gnocchi alla romana,simple 198,dairy,eggs,2,items,Recipe From Megan
+dinner,other,gnocchi alla romana,simple 198,dairy,milk,1000,mL,Recipe From Megan
+dinner,other,gnocchi alla romana,simple 198,dairy,parmesan,100,g,Recipe From Megan
+dinner,other,gnocchi alla romana,simple 198,west pantry,semolina,250,g,Recipe From Megan
+dinner,other,gnocchi alla romana,simple 198,dairy,unsalted butter,80,g,Recipe From Megan
+breakfast,other,granola madison park,nyt,bulk barn,coconut flakes,100,g,Recipe From Megan
+breakfast,other,granola madison park,nyt,bulk barn,dried cherries,200,g,Recipe From Megan
+breakfast,other,granola madison park,nyt,bulk barn,oats,1000,g,Recipe From Megan
+breakfast,other,granola madison park,nyt,bulk barn,pistachios,200,g,Recipe From Megan
+breakfast,other,granola madison park,nyt,bulk barn,pumpkin seeds,100,g,Recipe From Megan
+dinner,other meals,green onion and ginger noodles,east 90,west pantry,flat wheat noodles,400,g,Recipe From Megan
+dinner,other meals,green onion and ginger noodles,east 90,produce,ginger,2,g,Recipe From Megan
+dinner,other meals,green onion and ginger noodles,east 90,produce,green onions,14,items,Recipe From Megan
+dinner,egg dishes,harissa and manchego omeletes,simple 7,produce,cilantro,15,g,Recipe From Megan
+dinner,egg dishes,harissa and manchego omeletes,simple 7,dairy,eggs,12,items,Recipe From Megan
+dinner,egg dishes,harissa and manchego omeletes,simple 7,produce,limes,2,items,Recipe From Megan
+dinner,egg dishes,harissa and manchego omeletes,simple 7,dairy,manchego,110,g,Recipe From Megan
+dinner,egg dishes,harissa and manchego omeletes,simple 7,dairy,milk,100,ml,Recipe From Megan
+dinner,egg dishes,harissa and manchego omeletes,simple 7,produce,onions,2,items,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,avocados,1,items,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,baby spinach,250,g,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,bell peppers,2,items,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,cherry tomatoes,300,g,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,cilantro,10,g,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,jalapenos,2,items,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,limes,2,items,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,produce,red onions,1,items,Recipe From Megan
+dinner,bean and lentil dishes,harissa and white bean chili,nyt,west pantry,white beans,800,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,produce,basil,25,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,produce,garlic,5,cloves,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,produce,lemons,1,items,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,dairy,milk,600,ml,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,produce,peas,200,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,dairy,pecorino romano,100,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,produce,pine nuts,50,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,west pantry,semolina,180,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,produce,tarragon,15,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,dairy,unsalted butter,50,g,Recipe From Megan
+dinner,veg with grains,herby zucchini and peas with semolina porridge,simple 63,produce,zucchini,1200,g,Recipe From Megan
+dinner,light veg dishes,hot charred cheery tomatoes with cold yogurt,simple 70,produce,cherry tomatoes (fresh),350,g,Recipe From Megan
+dinner,light veg dishes,hot charred cheery tomatoes with cold yogurt,simple 70,produce,fresh oregano,6,sprigs,Recipe From Megan
+dinner,light veg dishes,hot charred cheery tomatoes with cold yogurt,simple 70,produce,fresh thyme,2,g,Recipe From Megan
+dinner,light veg dishes,hot charred cheery tomatoes with cold yogurt,simple 70,produce,garlic,3,cloves,Recipe From Megan
+dinner,light veg dishes,hot charred cheery tomatoes with cold yogurt,simple 70,dairy,greek yogurt,350,g,Recipe From Megan
+dinner,light veg dishes,hot charred cheery tomatoes with cold yogurt,simple 70,produce,lemons,1,items,Recipe From Megan
+dinner,served with rice,kimchi stew,fridge,produce,daikon,0.3,cups,Recipe From Megan
+dinner,served with rice,kimchi stew,fridge,produce,green onions,3,items,Recipe From Megan
+dinner,served with rice,kimchi stew,fridge,NA,kimchi,1,L,Recipe From Megan
+dinner,served with rice,kimchi stew,fridge,produce,onions,1,items,Recipe From Megan
+dinner,served with rice,kimchi stew,fridge,produce,soon tofu,1,package,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,produce,butternut squash,1,items,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,produce,chiles,3,items,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,dairy,eggs,2,items,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,produce,garlic,6,cloves,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,dairy,greek yogurt,500,g,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,produce,onions,1,items,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,produce,parsley,5,g,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,east pantry,pasta (mafalda),200,g,Recipe From Megan
+dinner,pasta,mafalda and roasted butternut in warm yogurt sauce,flavor 151,produce,tomatoes (fresh or canned),120,g,Recipe From Megan
+dinner,pasta,middle eastern mac and cheese,otk 140,dairy,cheddar,150,g,Recipe From Megan
+dinner,pasta,middle eastern mac and cheese,otk 140,dairy,cream,75,ml,Recipe From Megan
+dinner,pasta,middle eastern mac and cheese,otk 140,dairy,feta,180,g,Recipe From Megan
+dinner,pasta,middle eastern mac and cheese,otk 140,dairy,milk,650,ml,Recipe From Megan
+dinner,pasta,middle eastern mac and cheese,otk 140,produce,onions,1,items,Recipe From Megan
+dinner,pasta,middle eastern mac and cheese,otk 140,east pantry,pasta (any kind),300,g,Recipe From Megan
+dinner,pasta,middle eastern mac and cheese,otk 140,dairy,unsalted butter,65,g,Recipe From Megan
+breakfast,breakfast,muesli,matt,bulk barn,cashew pieces,100,g,Recipe From Megan
+breakfast,breakfast,muesli,matt,bulk barn,dried cherries,100,g,Recipe From Megan
+breakfast,breakfast,muesli,matt,bulk barn,oats,500,g,Recipe From Megan
+breakfast,breakfast,muesli,matt,bulk barn,pecan pieces,100,g,Recipe From Megan
+breakfast,breakfast,muesli,matt,bulk barn,pumpkin seeds,100,g,Recipe From Megan
+breakfast,breakfast,muesli,matt,bulk barn,sliced almonds,100,g,Recipe From Megan
+breakfast,breakfast,muesli,matt,bulk barn,sunflower seeds,100,g,Recipe From Megan
+dinner,served with rice,mushroom mapo tofu,east 171,produce,firm tofu,400,g,Recipe From Megan
+dinner,served with rice,mushroom mapo tofu,east 171,produce,garlic,3,cloves,Recipe From Megan
+dinner,served with rice,mushroom mapo tofu,east 171,produce,ginger,1,g,Recipe From Megan
+dinner,served with rice,mushroom mapo tofu,east 171,produce,green onions,1,items,Recipe From Megan
+dinner,served with rice,mushroom mapo tofu,east 171,produce,leeks,4,iems,Recipe From Megan
+dinner,served with rice,mushroom mapo tofu,east 171,produce,shiitake mushrooms,225,g,Recipe From Megan
+dessert,dessert,mutabbaq,jerusalem 262,frozen,filo,14,sheets,Recipe From Megan
+dessert,dessert,mutabbaq,jerusalem 262,dairy,goat cheese,250,g,Recipe From Megan
+dessert,dessert,mutabbaq,jerusalem 262,produce,lemons,1,items,Recipe From Megan
+dessert,dessert,mutabbaq,jerusalem 262,dairy,ricotta,500,g,Recipe From Megan
+dessert,dessert,mutabbaq,jerusalem 262,dairy,unsalted butter,130,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,cucumbers,250,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,dairy,flatbread,250,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,garlic,2,cloves,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,dairy,greek yogurt,200,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,green onions,2,items,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,lemons,1,items,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,dairy,milk,200,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,mint,15,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,parsley,25,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,radishes,100,g,Recipe From Megan
+dinner,light veg dishes,na'ama's fattoush,jerusalem 29,produce,tomatoes (fresh),380,g,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,east pantry,capers,1,tbsp,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,produce,cherry tomatoes,250,g,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,west pantry,chickpeas,425,g,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,produce,garlic,6,cloves,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,produce,lemons,1,items,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,produce,parsley,40,g,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,east pantry,pasta (orecchiette),250,g,Recipe From Megan
+dinner,pasta,one pan orecchiette puttanesca,flavor 139,east pantry,pitted green olives,125,g,Recipe From Megan
+dinner,veg with grains,oyster mushrooms,flavor 238,produce,garlic,2,cloves,Recipe From Megan
+dinner,veg with grains,oyster mushrooms,flavor 238,dairy,milk,500,ml,Recipe From Megan
+dinner,veg with grains,oyster mushrooms,flavor 238,produce,oyster mushrooms,680,g,Recipe From Megan
+dinner,veg with grains,oyster mushrooms,flavor 238,west pantry,semolina or polenta,100,g,Recipe From Megan
+dinner,veg with grains,oyster mushrooms,flavor 238,dairy,unsalted butter,60,g,Recipe From Megan
+dinner,pasta,pasta alla norma,simple 184,produce,basil,20,g,Recipe From Megan
+dinner,pasta,pasta alla norma,simple 184,east pantry,canned tomatoes,800,g,Recipe From Megan
+dinner,pasta,pasta alla norma,simple 184,produce,eggplants,3,items,Recipe From Megan
+dinner,pasta,pasta alla norma,simple 184,produce,fresh oregano,5,sprigs,Recipe From Megan
+dinner,pasta,pasta alla norma,simple 184,produce,garlic,5,cloves,Recipe From Megan
+dinner,pasta,pasta alla norma,simple 184,east pantry,pasta (any kind),300,g,Recipe From Megan
+dinner,pasta,pasta alla norma,simple 184,dairy,pecorino romano,45,g,Recipe From Megan
+dinner,pasta,pasta carbonara with english peas,six seasons 87,dairy,eggs,1,items,Recipe From Megan
+dinner,pasta,pasta carbonara with english peas,six seasons 87,produce,green onions,3,items,Recipe From Megan
+dinner,pasta,pasta carbonara with english peas,six seasons 87,east pantry,pasta (long),300,g,Recipe From Megan
+dinner,pasta,pasta carbonara with english peas,six seasons 87,produce,peas,200,g,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,west pantry,anchovies,3,items,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,produce,basil,50,g,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,east pantry,pasta (fusilli),200,g,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,produce,garlic,1,cloves,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,produce,lemons,1,items,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,dairy,pecorino romano,75,g,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,bulk barn,pistachios,75,g,Recipe From Megan
+dinner,noodles,pasta with pecorino and pistachios,simple 194,produce,snow peas,130,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,produce,baby spinach,200,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,produce,cilantro,20,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,produce,corn kernels,250,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,produce,dill,10,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,dairy,eggs,8,items,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,dairy,feta,150,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,produce,garlic,4,cloves,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,produce,green onions,6,items,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,dairy,milk,520,ml,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,dairy,parmesan,50,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,produce,parsley,10,g,Recipe From Megan
+dinner,egg dishes,polenta with fresh corn and braised eggs,flavor 163,east pantry,polenta,150,g,Recipe From Megan
+dinner,egg dishes,portobello mushroom with brioche and poached eggs,simple 10,produce,basil,5,g,Recipe From Megan
+dinner,egg dishes,portobello mushroom with brioche and poached eggs,simple 10,dairy,brioche,200,g,Recipe From Megan
+dinner,egg dishes,portobello mushroom with brioche and poached eggs,simple 10,dairy,eggs,4,items,Recipe From Megan
+dinner,egg dishes,portobello mushroom with brioche and poached eggs,simple 10,produce,garlic,2,cloves,Recipe From Megan
+dinner,egg dishes,portobello mushroom with brioche and poached eggs,simple 10,produce,portobello mushrooms,400,g,Recipe From Megan
+dinner,egg dishes,portobello mushroom with brioche and poached eggs,simple 10,dairy,sour cream,100,g,Recipe From Megan
+dinner,beans etc,portobello steaks and butter bean mash,flavor 210,west pantry,butter beans,500,g,Recipe From Megan
+dinner,beans etc,portobello steaks and butter bean mash,flavor 210,produce,chiles,1,items,Recipe From Megan
+dinner,beans etc,portobello steaks and butter bean mash,flavor 210,produce,garlic,10,cloves,Recipe From Megan
+dinner,beans etc,portobello steaks and butter bean mash,flavor 210,produce,lemons,1,items,Recipe From Megan
+dinner,beans etc,portobello steaks and butter bean mash,flavor 210,produce,onions,1,items,Recipe From Megan
+dinner,beans etc,portobello steaks and butter bean mash,flavor 210,produce,portobello mushrooms,8,items,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,produce,cherry tomatoes,200,g,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,dairy,creme fraiche,100,g,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,NA,dry white wine,80,ml,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,produce,eggplants,2,items,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,produce,fresh oregano,1,sprigs,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,produce,fresh thyme,5,g,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,produce,garlic,3,cloves,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,west pantry,puy lentils,180,g,Recipe From Megan
+dinner,bean and lentil dishes,puy lentil and eggplant stew,simple 159,produce,red onions,1,items,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,avocados,2,items,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,west pantry,black beans,150,g,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,dairy,cheddar,120,g,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,cilantro,30,g,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,garlic,1,cloves,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,green onions,3,items,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,jalapenos,2,items,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,limes,1.5,items,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,red onions,0.5,items,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,dairy,sour cream,200,g,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,produce,tomatoes (fresh),500,g,Recipe From Megan
+dinner,beans etc,quesadillas,plenty 134,dairy,tortillas,8,items,Recipe From Megan
+dinner,bean and lentil dishes,rajma chawal,vij's 114,east pantry,canned tomatoes,400,g,Recipe From Megan
+dinner,bean and lentil dishes,rajma chawal,vij's 114,produce,garlic,6,cloves,Recipe From Megan
+dinner,bean and lentil dishes,rajma chawal,vij's 114,produce,ginger,2,g,Recipe From Megan
+dinner,bean and lentil dishes,rajma chawal,vij's 114,east pantry,kidney beans,500,g,Recipe From Megan
+dinner,bean and lentil dishes,rajma chawal,vij's 114,produce,onions,1,items,Recipe From Megan
+dinner,bean and lentil dishes,rajma chawal,vij's 114,dairy,yogurt,125,g,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,butternut squash,1,items,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,garlic,1,cloves,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,dairy,gorgonzola or dolcelatte,100,g,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,lemons,1,items,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,mint,5,g,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,parsley,5,g,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,west pantry,puy lentils,100,g,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,red onions,2,items,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,sage,10,g,Recipe From Megan
+dinner,bean and lentil dishes,roasted butternut squash with lentils and dolcelatte,simple 119,produce,tarragon,10,g,Recipe From Megan
+dinner,veg dish,roasted eggplant with fried onion and chopped lemon,jerusalem 33,produce,eggplants,2,items,Recipe From Megan
+dinner,veg dish,roasted eggplant with fried onion and chopped lemon,jerusalem 33,dairy,feta,50,g,Recipe From Megan
+dinner,veg dish,roasted eggplant with fried onion and chopped lemon,jerusalem 33,produce,garlic,1,cloves,Recipe From Megan
+dinner,veg dish,roasted eggplant with fried onion and chopped lemon,jerusalem 33,produce,green chiles,1,items,Recipe From Megan
+dinner,veg dish,roasted eggplant with fried onion and chopped lemon,jerusalem 33,produce,lemons,1,items,Recipe From Megan
+dinner,veg dish,roasted eggplant with fried onion and chopped lemon,jerusalem 33,produce,onions,4,items,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,cilantro,10,g,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,cucumbers,330,g,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,garlic,6,cloves,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,green bell peppers,4,items,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,lemons,1,items,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,parsley,10,g,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,red bell peppers,2,items,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,red onions,2,items,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,serrano chile,1,items,Recipe From Megan
+dinner,light veg dishes,roasted pepper salad with cucumber and herbs,otk 76,produce,tomatoes (fresh),400,g,Recipe From Megan
+dinner,pasta,roasted white bean and tomato pasta,nyt,produce,cherry tomatoes,450,g,Recipe From Megan
+dinner,pasta,roasted white bean and tomato pasta,nyt,produce,garlic,5,cloves,Recipe From Megan
+dinner,pasta,roasted white bean and tomato pasta,nyt,east pantry,pasta (orecchiette),450,g,Recipe From Megan
+dinner,pasta,roasted white bean and tomato pasta,nyt,produce,shallots,1,items,Recipe From Megan
+dinner,pasta,roasted white bean and tomato pasta,nyt,west pantry,white beans,400,g,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,cilantro,35,g,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,cucumbers,120,g,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,eggplants,2,items,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,dairy,eggs,4,items,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,garlic,2,cloves,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,green chiles,1,items,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,large green mango,1,item,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,green onions,2,items,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,lemons,1,items,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,parsley,12,g,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,dairy,pitas or bread,4,items,Recipe From Megan
+dinner,with eggs,sabih,jerusalem 91,produce,tomatoes (fresh),240,g,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,produce,avocados,3,items,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,produce,cilantro,20,g,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,dairy,crusty bread (optional),400,g,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,produce,cucumbers,180,g,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,produce,green chiles,2,items,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,produce,limes,1,items,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,produce,onions,2,items,Recipe From Megan
+dinner,tofu dishes,scrambled harissa tofu,simple 13,produce,silken tofu,700,g,Recipe From Megan
+dinner,egg dishes,shakshuka,jerusalem 66,dairy,eggs,4,items,Recipe From Megan
+dinner,egg dishes,shakshuka,jerusalem 66,produce,garlic,4,cloves,Recipe From Megan
+dinner,egg dishes,shakshuka,jerusalem 66,dairy,labneh or greek yogurt,120,g,Recipe From Megan
+dinner,egg dishes,shakshuka,jerusalem 66,produce,red bell peppers,2,items,Recipe From Megan
+dinner,egg dishes,shakshuka,jerusalem 66,produce,tomatoes (fresh or canned),800,g,Recipe From Megan
+dinner,noodles,soba noodles with lime cardamom and avocado,simple 181,produce,avocados,2,items,Recipe From Megan
+dinner,noodles,soba noodles with lime cardamom and avocado,simple 181,produce,basil,30,g,Recipe From Megan
+dinner,noodles,soba noodles with lime cardamom and avocado,simple 181,produce,cilantro,30,g,Recipe From Megan
+dinner,noodles,soba noodles with lime cardamom and avocado,simple 181,produce,green chiles,1,items,Recipe From Megan
+dinner,noodles,soba noodles with lime cardamom and avocado,simple 181,produce,limes,3,items,Recipe From Megan
+dinner,noodles,soba noodles with lime cardamom and avocado,simple 181,bulk barn,pistachios,70,g,Recipe From Megan
+dinner,noodles,soba noodles with lime cardamom and avocado,simple 181,west pantry,soba noodles,200,g,Recipe From Megan
+dinner,pasta,"spaghetti with swiss chard, pine nuts, raisins and chiles",six seasons 301,produce,chard,1,bunch,Recipe From Megan
+dinner,pasta,"spaghetti with swiss chard, pine nuts, raisins and chiles",six seasons 301,produce,garlic,2,cloves,Recipe From Megan
+dinner,pasta,"spaghetti with swiss chard, pine nuts, raisins and chiles",six seasons 301,east pantry,golden raisins,75,g,Recipe From Megan
+dinner,pasta,"spaghetti with swiss chard, pine nuts, raisins and chiles",six seasons 301,east pantry,pasta (any kind),250,g,Recipe From Megan
+dinner,pasta,"spaghetti with swiss chard, pine nuts, raisins and chiles",six seasons 301,produce,pine nuts,60,g,Recipe From Megan
+dinner,pasta,"spaghetti with swiss chard, pine nuts, raisins and chiles",six seasons 301,dairy,unsalted butter,60,g,Recipe From Megan
+dessert,dessert,spice cake,sweet 186,dairy,eggs,3,items,Recipe From Megan
+dessert,dessert,spice cake,sweet 186,produce,orange,1,items,Recipe From Megan
+dessert,dessert,spice cake,sweet 186,dairy,sour cream,120,g,Recipe From Megan
+dessert,dessert,spice cake,sweet 186,dairy,unsalted butter,180,g,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,west pantry,chickpeas,100,g,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,cilantro,20,g,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,cucumbers,280,g,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,garlic,1,cloves,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,lemons,1,items,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,parsley,15,g,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,radishes,240,g,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,red bell peppers,1,items,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,red onions,1,items,Recipe From Megan
+dinner,light veg dishes,spiced chickpeas and fresh vegetable salad,jerusalem 56,produce,tomatoes (fresh),300,g,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,produce,cilantro,5,g,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,west pantry,coconut milk,200,ml,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,produce,corn kernels,350,g,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,produce,garlic,2,cloves,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,produce,ginger,20,g,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,produce,limes,2,items,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,bulk barn,peanuts,60,g,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,west pantry,semolina coarse,75,g,Recipe From Megan
+dinner,veg with grains,"spiced semolina with corn, peanuts, and cilantro",otk 59,produce,serrano chile,1,items,Recipe From Megan
+dinner,light veg dishes,summer zucchini with tomatoes and ricotta,otk 81,produce,basil,10,g,Recipe From Megan
+dinner,light veg dishes,summer zucchini with tomatoes and ricotta,otk 81,produce,fresh oregano,10,sprigs,Recipe From Megan
+dinner,light veg dishes,summer zucchini with tomatoes and ricotta,otk 81,produce,garlic,6,cloves,Recipe From Megan
+dinner,light veg dishes,summer zucchini with tomatoes and ricotta,otk 81,produce,lemons,1,items,Recipe From Megan
+dinner,light veg dishes,summer zucchini with tomatoes and ricotta,otk 81,dairy,ricotta,120,g,Recipe From Megan
+dinner,light veg dishes,summer zucchini with tomatoes and ricotta,otk 81,produce,tomatoes (fresh),400,g,Recipe From Megan
+dinner,light veg dishes,summer zucchini with tomatoes and ricotta,otk 81,produce,zucchini,750,g,Recipe From Megan
+dinner,served with rice,sweet potato and broccolini bibimbap,east 148,produce,avocados,2,items,Recipe From Megan
+dinner,served with rice,sweet potato and broccolini bibimbap,east 148,produce,broccolini,300,g,Recipe From Megan
+dinner,served with rice,sweet potato and broccolini bibimbap,east 148,dairy,eggs,4,items,Recipe From Megan
+dinner,served with rice,sweet potato and broccolini bibimbap,east 148,produce,garlic,1,cloves,Recipe From Megan
+dinner,served with rice,sweet potato and broccolini bibimbap,east 148,produce,sweet potatoes,2,items,Recipe From Megan
+dinner,with rice,"sweet potato in tomato, lime, and cardamom sauce",flavor 131,east pantry,canned tomatoes,400,g,Recipe From Megan
+dinner,with rice,"sweet potato in tomato, lime, and cardamom sauce",flavor 131,produce,dill,2,g,Recipe From Megan
+dinner,with rice,"sweet potato in tomato, lime, and cardamom sauce",flavor 131,produce,garlic,6,cloves,Recipe From Megan
+dinner,with rice,"sweet potato in tomato, lime, and cardamom sauce",flavor 131,produce,green chiles,2,items,Recipe From Megan
+dinner,with rice,"sweet potato in tomato, lime, and cardamom sauce",flavor 131,produce,limes,2,items,Recipe From Megan
+dinner,with rice,"sweet potato in tomato, lime, and cardamom sauce",flavor 131,produce,shallots,2,items,Recipe From Megan
+dinner,with rice,"sweet potato in tomato, lime, and cardamom sauce",flavor 131,produce,sweet potatoes,4,items,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,west pantry,anchovies,6,items,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,produce,basil,5,g,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,east pantry,capers,1,tbsp,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,dairy,crusty bread,100,g,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,produce,garlic,4,cloves,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,produce,lemons,1,items,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,produce,parsley,5,g,Recipe From Megan
+dinner,light veg dishes,tomato and bread salad with anchovies,simple 33,produce,tomatoes (fresh),500,g,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,east pantry,canned tomatoes,800,g,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,produce,chard,500,g,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,produce,dill,35,g,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,produce,garlic,2,cloves,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,produce,green onions,8,items,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,produce,limes,2,items,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,produce,mint,35,g,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,bulk barn,sliced almonds,50,g,Recipe From Megan
+dinner,light veg dishes,"tomato, chard, and spinach with toasted almonds",simple 72,produce,spinach,130,g,Recipe From Megan
+dinner,light veg dishes,"tomato, melon, and chile bruschetta",tartine bread,produce,basil,5,g,Recipe From Megan
+dinner,light veg dishes,"tomato, melon, and chile bruschetta",tartine bread,dairy,crusty bread,400,g,Recipe From Megan
+dinner,light veg dishes,"tomato, melon, and chile bruschetta",tartine bread,produce,lemons,2,items,Recipe From Megan
+dinner,light veg dishes,"tomato, melon, and chile bruschetta",tartine bread,produce,melon,450,g,Recipe From Megan
+dinner,light veg dishes,"tomato, melon, and chile bruschetta",tartine bread,produce,mint,5,g,Recipe From Megan
+dinner,light veg dishes,"tomato, melon, and chile bruschetta",tartine bread,produce,tomatoes (fresh),450,g,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,produce,basil,5,g,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,west pantry,chickpeas,400,g,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,produce,cucumbers,200,g,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,produce,garlic,1,cloves,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,produce,mint,5,g,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,produce,parsley,5,g,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,produce,red onions,0.5,items,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,produce,tomatoes (fresh),600,g,Recipe From Megan
+dinner,light veg dish,"tomatoes, yogurt sauce, and chickpeas",six seasons 266,dairy,yogurt,150,g,Recipe From Megan
+dinner,pasta,udon noodles with red cabbage and cauliflower,east 88,produce,cauliflower,450,g,Recipe From Megan
+dinner,pasta,udon noodles with red cabbage and cauliflower,east 88,produce,garlic,2,cloves,Recipe From Megan
+dinner,pasta,udon noodles with red cabbage and cauliflower,east 88,produce,green onions,8,items,Recipe From Megan
+dinner,pasta,udon noodles with red cabbage and cauliflower,east 88,produce,limes,2,items,Recipe From Megan
+dinner,pasta,udon noodles with red cabbage and cauliflower,east 88,produce,red cabbage,0.5,head,Recipe From Megan
+dinner,pasta,udon noodles with red cabbage and cauliflower,east 88,west pantry,udon noodles--ready to fry,600,g,Recipe From Megan
+dessert,dessert,upside-down lemon maple and vanilla cake with lemon-maple butter,otk 218,dairy,creme fraiche,240,g,Recipe From Megan
+dessert,dessert,upside-down lemon maple and vanilla cake with lemon-maple butter,otk 218,dairy,eggs,3,items,Recipe From Megan
+dessert,dessert,upside-down lemon maple and vanilla cake with lemon-maple butter,otk 218,produce,lemons,4,items,Recipe From Megan
+dessert,dessert,upside-down lemon maple and vanilla cake with lemon-maple butter,otk 218,west pantry,maple syrup,280,ml,Recipe From Megan
+dessert,dessert,upside-down lemon maple and vanilla cake with lemon-maple butter,otk 218,dairy,milk,60,ml,Recipe From Megan
+dessert,dessert,upside-down lemon maple and vanilla cake with lemon-maple butter,otk 218,dairy,unsalted butter,340,g,Recipe From Megan
+dessert,dessert,vineyard cake,sweet 134,dairy,eggs,4,items,Recipe From Megan
+dessert,dessert,vineyard cake,sweet 134,produce,grapes,200,g,Recipe From Megan
+dessert,dessert,vineyard cake,sweet 134,produce,lemons,2,items,Recipe From Megan
+dessert,dessert,vineyard cake,sweet 134,NA,muscat wine,450,ml,Recipe From Megan
+dessert,dessert,vineyard cake,sweet 134,produce,orange,1,items,Recipe From Megan
+dessert,dessert,vineyard cake,sweet 134,dairy,unsalted butter,240,g,Recipe From Megan
+dinner,pasta,zaatar cacio e pepe,flavor 104,east pantry,pasta (bucatini),400,g,Recipe From Megan
+dinner,pasta,zaatar cacio e pepe,flavor 104,dairy,pecorino romano,30,g,Recipe From Megan
+dinner,pasta,zaatar cacio e pepe,flavor 104,dairy,unsalted butter,50,g,Recipe From Megan
+dinner,other meals,zucchini and ciabatta frittata,simple 9,produce,basil,25,g,Recipe From Megan
+dinner,other meals,zucchini and ciabatta frittata,simple 9,east pantry,ciabatta,500,g,Recipe From Megan
+dinner,other meals,zucchini and ciabatta frittata,simple 9,dairy,cream,200,ml,Recipe From Megan
+dinner,other meals,zucchini and ciabatta frittata,simple 9,dairy,eggs,6,items,Recipe From Megan
+dinner,other meals,zucchini and ciabatta frittata,simple 9,produce,garlic,2,cloves,Recipe From Megan
+dinner,other meals,zucchini and ciabatta frittata,simple 9,dairy,milk,200,ml,Recipe From Megan
+dinner,other meals,zucchini and ciabatta frittata,simple 9,produce,zucchini,430,g,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,produce,butternut squash,1,items,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,west pantry,red or yellow curry paste,2,tbsp,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,produce,ginger,3,g,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,west pantry,coconut milk,800,ml,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,east pantry,egg noodles,250,g,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,produce,limes,1,items,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,produce,cilantro,5,g,Recipe From Megan
+dinner,other meals,butternut squash and coconut noodle soup,NYT,produce,shallots,1,items,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,produce,tomatillos,250,g,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,produce,onions,1,items,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,produce,green bell peppers,2,items,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,produce,poblano chile,1,items,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,produce,spinach,1,bunch,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,east pantry,black beans,500,g,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,dairy,queso fresco,1,package,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,dairy,cheddar,300,g,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,produce,jalapenos,2,items,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,dairy,sour cream,200,g,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,produce,green onions,3,items,Recipe From Megan
+dinner,other meals,enchiladas,NYT + improvised,east pantry,flour tortillas,10,items,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,produce,onions,1,items,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,produce,fennel,1,bulb,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,produce,mushrooms,250,g,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,produce,red bell peppers,1,items,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,produce,spinach,150,g,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,produce,basil,5,g,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,produce,garlic,3,cloves,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,east pantry,tomato paste,170,ml,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,east pantry,canned tomatoes (crushed),800,ml,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,east pantry,lassagna noodles,450,g,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,dairy,ricotta,450,g,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,dairy,mozzarella,450,g,Recipe From Megan
+dinner,other meals,lasagna,smitten kitchen,dairy,parmesan,113,g,Recipe From Megan
+basics,basics,basics,NA,produce,snacking fruit,1,for the week,Recipe From Megan
+breakfast,other meals,granola cocnut almond,NYT,east pantry,coconut milk,160,ml,Recipe From Megan
+breakfast,other meals,granola cocnut almond,NYT,east pantry,oats,455,g,Recipe From Megan
+breakfast,other meals,granola cocnut almond,NYT,east pantry,coconut flakes,50,g,Recipe From Megan
+breakfast,other meals,granola cocnut almond,NYT,east pantry,sliced almonds,85,g,Recipe From Megan
+breakfast,other meals,granola cocnut almond,NYT,east pantry,pumpkin seeds,70,g,Recipe From Megan
+breakfast,other meals,granola cocnut almond,NYT,east pantry,sunflower seeds,65,g,Recipe From Megan
+dessert,dessert,souffles corn,Obsidian Recipe Database Noah,dairy,butter,118,ml,Imported by Noah | Substitute heavy coconut milk for evaporated milk | Egg replacer option
+dessert,dessert,souffles corn,Obsidian Recipe Database Noah,pantry,sugar,118,ml,Imported by Noah | Substitute heavy coconut milk for evaporated milk | Egg replacer option
+dessert,dessert,souffles corn,Obsidian Recipe Database Noah,dairy,evaporated milk,118,ml,Imported by Noah | Substitute heavy coconut milk for evaporated milk | Egg replacer option
+dessert,dessert,souffles corn,Obsidian Recipe Database Noah,dairy,eggs,2,items,Imported by Noah | Substitute heavy coconut milk for evaporated milk | Egg replacer option
+dessert,dessert,souffles corn,Obsidian Recipe Database Noah,pantry,vanilla extract,0.5,tsp,Imported by Noah | Substitute heavy coconut milk for evaporated milk | Egg replacer option
+dessert,dessert,souffles corn,Obsidian Recipe Database Noah,pantry,corn niblets,680,g,Imported by Noah | Substitute heavy coconut milk for evaporated milk | Egg replacer option
+dessert,dessert,souffles corn,Obsidian Recipe Database Noah,pantry,cinnamon,1,tsp,Imported by Noah | Substitute heavy coconut milk for evaporated milk | Egg replacer option

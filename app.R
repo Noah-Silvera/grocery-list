@@ -18,6 +18,7 @@ library(googlesheets4)
 # notes: shopping notes (not used currently)
 
 master_list = read_csv("master_list.csv")
+master_list_megan = read_csv("master_list_megan.csv")
 
 # Create a small table of recipe names and sources
 recipe_names = master_list %>%
@@ -32,6 +33,12 @@ ui <- fluidPage(
   sidebarLayout(
     # A panel for inputs
     sidebarPanel(
+      # Checkbox to include Megan's recipes
+      checkboxInput(
+        inputId = "include_megan",
+        label = "Include Megan's recipes",
+        value = FALSE
+      ),
       # Use an input type that allows selection of multiple recipes
       selectInput(
         inputId = "masterclass",
@@ -52,8 +59,31 @@ ui <- fluidPage(
 
 # Define the server logic
 server <- function(input, output, session) {
+
+  # Reactive to get the current master list (with or without Megan's recipes)
+  current_master_list <- reactive({
+    if (input$include_megan) {
+      bind_rows(master_list, master_list_megan)
+    } else {
+      master_list
+    }
+  })
+
+  # Reactive to get the current recipe names
+  current_recipe_names <- reactive({
+    current_master_list() %>%
+      distinct(meal, source, notes) %>%
+      arrange(meal)
+  })
+
+  # Update recipe choices when checkbox changes
+  observeEvent(input$include_megan, {
+    updateSelectInput(session, "masterclass",
+                     choices = current_recipe_names()$meal)
+  })
+
   groceries <- eventReactive(input$masterclass, {
-    master_list %>%
+    current_master_list() %>%
       filter(meal %in% input$masterclass) %>%
       group_by(section, ingredient, units) %>%
       summarize(total = sum(amount)) %>%
@@ -63,15 +93,13 @@ server <- function(input, output, session) {
       select(ingredient, total, units) %>%
       mutate(items = str_c(ingredient, as.character(total), units, sep = " ")) %>%
       select(items)
-
-
   })
+
   recipe_list <- eventReactive(input$masterclass, {
-    recipe_names %>%
+    current_recipe_names() %>%
       filter(meal %in% input$masterclass) %>%
       select(meal, source, notes) %>%
       distinct()
-
   })
 
   output$ingredients <- renderTable({
