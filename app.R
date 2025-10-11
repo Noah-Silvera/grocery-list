@@ -3,11 +3,11 @@ library(tidyverse)
 library(shiny)
 library(googlesheets4)
 
-# shiny app basics from 
+# shiny app basics from
 # https://stackoverflow.com/questions/73263669/grocery-list-in-shiny
 
 # Pull in a list of recipes and ingredients
-# Columns are 
+# Columns are
 # type: dinner, dessert (not used currently)
 # meal: name of recipe
 # source: cookbook and page
@@ -20,14 +20,14 @@ library(googlesheets4)
 master_list = read_csv("master_list.csv")
 
 # Create a small table of recipe names and sources
-recipe_names = master_list %>% 
-  distinct(meal, source) %>% 
+recipe_names = master_list %>%
+  distinct(meal, source) %>%
   arrange(meal)
 
 ui <- fluidPage(
   # App title
   titlePanel("What are you making this week?"),
-  
+
   # Sidebar layout
   sidebarLayout(
     # A panel for inputs
@@ -49,39 +49,39 @@ ui <- fluidPage(
 )
 
 
-  
+
 # Define the server logic
 server <- function(input, output, session) {
   groceries <- eventReactive(input$masterclass, {
-    master_list %>% 
+    master_list %>%
       filter(meal %in% input$masterclass) %>%
-      group_by(section, ingredient, units) %>% 
-      summarize(total = sum(amount)) %>% 
-      arrange(section, ingredient) %>% 
-      ungroup() %>% 
+      group_by(section, ingredient, units) %>%
+      summarize(total = sum(amount)) %>%
+      arrange(section, ingredient) %>%
+      ungroup() %>%
       # would be nice to get grocery section in as headings
-      select(ingredient, total, units) %>% 
+      select(ingredient, total, units) %>%
       mutate(items = str_c(ingredient, as.character(total), units, sep = " ")) %>%
       select(items)
-    
+
 
   })
   recipe_list <- eventReactive(input$masterclass, {
-    recipe_names %>% 
-      filter(meal %in% input$masterclass) %>% 
-      select(meal, source) %>% 
+    recipe_names %>%
+      filter(meal %in% input$masterclass) %>%
+      select(meal, source, notes) %>%
       distinct()
-    
+
   })
-  
+
   output$ingredients <- renderTable({
     groceries()
   })
-  
+
   output$recipe_list <- renderTable({
     recipe_list()
   })
-  
+
 }
 
 shinyApp(ui, server)
