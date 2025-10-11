@@ -152,19 +152,13 @@ ui <- navbarPage(
             )
           ),
 
-          textAreaInput(
-            inputId = "recipe_notes",
-            label = "Notes",
-            placeholder = "Any special notes or instructions...",
-            rows = 2
-          ),
 
           # Ingredients section
           h4("Ingredients"),
           p("Add ingredients for this recipe:"),
 
-          # Dynamic ingredient rows
-          uiOutput("ingredient_rows"),
+          # Container for dynamic ingredient rows
+          div(id = "ingredient_container"),
 
           # Add ingredient button
           actionButton(
@@ -294,11 +288,71 @@ server <- function(input, output, session) {
           section = "produce",
           name = "",
           amount = 1,
-          units = ""
+          units = "",
+          notes = ""
         )
+      )
+
+      # Insert the first ingredient row
+      insertUI(
+        selector = "#ingredient_container",
+        where = "beforeEnd",
+        ui = create_ingredient_row(1)
       )
     }
   })
+
+  # Function to create an ingredient row
+  create_ingredient_row <- function(ingredient_id) {
+    fluidRow(
+      id = paste0("ingredient_row_", ingredient_id),
+      column(2,
+        selectInput(
+          inputId = paste0("ingredient_section_", ingredient_id),
+          label = "Section",
+          choices = all_sections(),
+          selected = "produce"
+        )
+      ),
+      column(2,
+        textInput(
+          inputId = paste0("ingredient_name_", ingredient_id),
+          label = "Ingredient",
+          placeholder = "e.g., tomatoes",
+          value = ""
+        )
+      ),
+      column(1,
+        numericInput(
+          inputId = paste0("ingredient_amount_", ingredient_id),
+          label = "Amount",
+          value = 1,
+          min = 0,
+          step = 0.1
+        )
+      ),
+      column(1,
+        textInput(
+          inputId = paste0("ingredient_units_", ingredient_id),
+          label = "Units",
+          placeholder = "e.g., items, g, ml",
+          value = ""
+        )
+      ),
+      column(4,
+        textInput(
+          inputId = paste0("ingredient_notes_", ingredient_id),
+          label = "Notes",
+          placeholder = "e.g., substitute heavy coconut milk for evaporated milk",
+          value = ""
+        )
+      ),
+      column(1,
+        id = paste0("button_container_", ingredient_id),
+        br()
+      )
+    )
+  }
 
   # Handle mode switching - show/hide recipe selector
   observeEvent(input$editor_mode, {
@@ -316,6 +370,7 @@ server <- function(input, output, session) {
     }
   })
 
+
   # Add ingredient button
   observeEvent(input$add_ingredient, {
     editor_state$ingredient_counter <- editor_state$ingredient_counter + 1
@@ -324,15 +379,66 @@ server <- function(input, output, session) {
       section = "produce",
       name = "",
       amount = 1,
-      units = ""
+      units = "",
+      notes = ""
     )
     editor_state$ingredients <- append(editor_state$ingredients, list(new_ingredient))
+
+    # Insert new ingredient row
+    insertUI(
+      selector = "#ingredient_container",
+      where = "beforeEnd",
+      ui = create_ingredient_row(editor_state$ingredient_counter)
+    )
+
+    # Update remove buttons for all rows
+    update_remove_buttons()
   })
 
-  # Remove ingredient button (handled in renderUI)
-  observeEvent(input$remove_ingredient, {
-    ingredient_id <- as.numeric(input$remove_ingredient)
-    editor_state$ingredients <- editor_state$ingredients[!sapply(editor_state$ingredients, function(x) x$id == ingredient_id)]
+  # Function to update remove buttons
+  update_remove_buttons <- function() {
+    # Remove all existing remove buttons first
+    for (ingredient in editor_state$ingredients) {
+      removeUI(selector = paste0("#remove_ingredient_", ingredient$id), immediate = TRUE)
+    }
+
+    # Add remove buttons only if more than one ingredient
+    if (length(editor_state$ingredients) > 1) {
+      for (ingredient in editor_state$ingredients) {
+        # Clear the button container completely
+        removeUI(selector = paste0("#button_container_", ingredient$id, " > *"), immediate = TRUE)
+
+        # Add the remove button
+        insertUI(
+          selector = paste0("#button_container_", ingredient$id),
+          where = "beforeEnd",
+          ui = actionButton(
+            inputId = paste0("remove_ingredient_", ingredient$id),
+            label = "Remove",
+            class = "btn-danger btn-sm"
+          )
+        )
+      }
+    }
+  }
+
+  # Remove ingredient buttons - handle all possible remove buttons
+  observe({
+    for (ingredient in editor_state$ingredients) {
+      local({
+        ingredient_id <- ingredient$id
+        observeEvent(input[[paste0("remove_ingredient_", ingredient_id)]], {
+          # Remove from reactive values
+          editor_state$ingredients <- editor_state$ingredients[!sapply(editor_state$ingredients, function(x) x$id == ingredient_id)]
+
+          # Remove from UI
+          removeUI(selector = paste0("#ingredient_row_", ingredient_id), immediate = TRUE)
+
+          # Update remove buttons
+          update_remove_buttons()
+        })
+      })
+    }
   })
 
   # Clear form button
@@ -342,7 +448,9 @@ server <- function(input, output, session) {
     updateTextInput(session, "recipe_source", value = "")
     updateSelectInput(session, "recipe_type", selected = "dinner")
     updateTextInput(session, "recipe_category", value = "")
-    updateTextAreaInput(session, "recipe_notes", value = "")
+
+    # Clear all ingredient rows
+    removeUI(selector = "#ingredient_container > *", immediate = TRUE)
 
     # Reset ingredients to single empty row
     editor_state$ingredient_counter <- 1
@@ -352,65 +460,131 @@ server <- function(input, output, session) {
         section = "produce",
         name = "",
         amount = 1,
-        units = ""
+        units = "",
+        notes = ""
       )
     )
+
+    # Insert the first ingredient row
+    insertUI(
+      selector = "#ingredient_container",
+      where = "beforeEnd",
+      ui = create_ingredient_row(1)
+    )
+
+    # Force a small delay to ensure UI updates
+    Sys.sleep(0.1)
+
+    # Update remove buttons after clearing
+    update_remove_buttons()
   })
 
-  # Render dynamic ingredient rows
-  output$ingredient_rows <- renderUI({
-    if (length(editor_state$ingredients) == 0) return(NULL)
 
-    lapply(editor_state$ingredients, function(ingredient) {
-      fluidRow(
-        column(3,
-          selectInput(
-            inputId = paste0("ingredient_section_", ingredient$id),
-            label = "Section",
-            choices = all_sections(),
-            selected = ingredient$section
-          )
-        ),
-        column(3,
-          textInput(
-            inputId = paste0("ingredient_name_", ingredient$id),
-            label = "Ingredient",
-            placeholder = "e.g., tomatoes",
-            value = ingredient$name
-          )
-        ),
-        column(2,
-          numericInput(
-            inputId = paste0("ingredient_amount_", ingredient$id),
-            label = "Amount",
-            value = ingredient$amount,
-            min = 0,
-            step = 0.1
-          )
-        ),
-        column(2,
-          textInput(
-            inputId = paste0("ingredient_units_", ingredient$id),
-            label = "Units",
-            placeholder = "e.g., items, g, ml",
-            value = ingredient$units
-          )
-        ),
-        column(2,
-          br(),
-          if (length(editor_state$ingredients) > 1) {
-            actionButton(
-              inputId = "remove_ingredient",
-              label = "Remove",
-              class = "btn-danger btn-sm",
-              onclick = paste0("Shiny.setInputValue('remove_ingredient', ", ingredient$id, ", {priority: 'event'})")
-            )
-          } else {
-            div() # Empty div when only one ingredient
-          }
-        )
+  # Save recipe functionality
+  observeEvent(input$save_recipe, {
+    # Validate required fields
+    if (is.null(input$recipe_name) || input$recipe_name == "") {
+      showNotification("Recipe name is required!", type = "error")
+      return()
+    }
+
+    # Collect ingredient data directly from inputs
+    ingredient_data <- list()
+
+    for (ingredient in editor_state$ingredients) {
+      section_val <- input[[paste0("ingredient_section_", ingredient$id)]]
+      name_val <- input[[paste0("ingredient_name_", ingredient$id)]]
+      amount_val <- input[[paste0("ingredient_amount_", ingredient$id)]]
+      units_val <- input[[paste0("ingredient_units_", ingredient$id)]]
+      notes_val <- input[[paste0("ingredient_notes_", ingredient$id)]]
+
+      # Skip empty ingredient rows
+      if (is.null(name_val) || name_val == "" || is.null(amount_val) || amount_val <= 0) {
+        next
+      }
+
+      new_ingredient <- list(
+        type = input$recipe_type,
+        category = ifelse(input$recipe_category == "", NA, input$recipe_category),
+        meal = input$recipe_name,
+        source = ifelse(input$recipe_source == "", NA, input$recipe_source),
+        section = section_val,
+        ingredient = name_val,
+        amount = amount_val,
+        units = ifelse(units_val == "", "items", units_val),
+        notes = ifelse(is.null(notes_val) || notes_val == "", NA, notes_val)
       )
-    })
+
+      ingredient_data <- append(ingredient_data, list(new_ingredient))
+    }
+
+    # Check if we have at least one valid ingredient
+    if (length(ingredient_data) == 0) {
+      showNotification("At least one ingredient is required!", type = "error")
+      return()
+    }
+
+    # Convert to data frame
+    new_recipe_df <- do.call(rbind, lapply(ingredient_data, function(x) {
+      data.frame(
+        type = as.character(x$type),
+        category = as.character(x$category),
+        meal = as.character(x$meal),
+        source = as.character(x$source),
+        section = as.character(x$section),
+        ingredient = as.character(x$ingredient),
+        amount = as.numeric(x$amount),
+        units = as.character(x$units),
+        notes = as.character(x$notes),
+        stringsAsFactors = FALSE
+      )
+    }))
+
+    # Add to master_list_data
+    current_data <- master_list_data()
+    updated_data <- bind_rows(current_data, new_recipe_df)
+    master_list_data(updated_data)
+
+    # Save to CSV
+    write_csv(updated_data, "master_list.csv")
+
+    # Show success message
+    showNotification(paste("Recipe '", input$recipe_name, "' saved successfully!"), type = "message")
+
+    # Clear form
+    updateTextInput(session, "recipe_name", value = "")
+    updateTextInput(session, "recipe_source", value = "")
+    updateSelectInput(session, "recipe_type", selected = "dinner")
+    updateTextInput(session, "recipe_category", value = "")
+
+    # Clear all ingredient rows
+    removeUI(selector = "#ingredient_container > *", immediate = TRUE)
+
+    # Reset ingredients to single empty row
+    editor_state$ingredient_counter <- 1
+    editor_state$ingredients <- list(
+      list(
+        id = 1,
+        section = "produce",
+        name = "",
+        amount = 1,
+        units = "",
+        notes = ""
+      )
+    )
+
+    # Insert the first ingredient row
+    insertUI(
+      selector = "#ingredient_container",
+      where = "beforeEnd",
+      ui = create_ingredient_row(1)
+    )
+
+    # Force a small delay to ensure UI updates
+    Sys.sleep(0.1)
+
+    # Update remove buttons after clearing
+    update_remove_buttons()
   })
 
   # Update editor status with ingredient count
