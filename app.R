@@ -409,17 +409,22 @@ server <- function(input, output, session) {
 
   # Function to update remove buttons
   update_remove_buttons <- function() {
-    # Remove all existing remove buttons first
-    for (ingredient in editor_state$ingredients) {
-      removeUI(selector = paste0("#remove_ingredient_", ingredient$id), immediate = TRUE)
+    # Remove ALL possible remove buttons first (IDs 1-100 to be safe)
+    for (i in 1:100) {
+      removeUI(selector = paste0("#remove_ingredient_", i), immediate = TRUE)
     }
 
-    # Add remove buttons only if more than one ingredient
-    if (length(editor_state$ingredients) > 1) {
-      for (ingredient in editor_state$ingredients) {
-        # Clear the button container completely
-        removeUI(selector = paste0("#button_container_", ingredient$id, " > *"), immediate = TRUE)
+    # Clear all button containers completely
+    for (ingredient in editor_state$ingredients) {
+      removeUI(selector = paste0("#button_container_", ingredient$id, " > *"), immediate = TRUE)
+    }
 
+    # Only add remove buttons if we have more than one ingredient
+    if (length(editor_state$ingredients) > 1) {
+      # Add a small delay to ensure clearing is complete
+      Sys.sleep(0.1)
+
+      for (ingredient in editor_state$ingredients) {
         # Add the remove button
         insertUI(
           selector = paste0("#button_container_", ingredient$id),
@@ -446,7 +451,8 @@ server <- function(input, output, session) {
           # Remove from UI
           removeUI(selector = paste0("#ingredient_row_", ingredient_id), immediate = TRUE)
 
-          # Update remove buttons
+          # Force a delay and then update buttons
+          Sys.sleep(0.3)
           update_remove_buttons()
         })
       })
