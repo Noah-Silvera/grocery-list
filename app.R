@@ -154,11 +154,13 @@ ui <- navbarPage(
 
 
           # Ingredients section
-          h4("Ingredients"),
-          p("Add ingredients for this recipe:"),
+          div(id = "ingredients_section",
+            h4("Ingredients"),
+            p("Add ingredients for this recipe:"),
 
-          # Container for dynamic ingredient rows
-          div(id = "ingredient_container"),
+            # Container for dynamic ingredient rows
+            div(id = "ingredient_container")
+          ),
 
           # Add ingredient button
           actionButton(
@@ -367,6 +369,16 @@ server <- function(input, output, session) {
 
       updateSelectInput(session, "edit_recipe_select",
                        choices = c("Select a recipe..." = "", user_recipes))
+    } else {
+      # Clear form when switching to add mode
+      clear_form()
+    }
+  })
+
+  # Handle recipe selection for editing
+  observeEvent(input$edit_recipe_select, {
+    if (!is.null(input$edit_recipe_select) && input$edit_recipe_select != "") {
+      load_recipe_for_editing(input$edit_recipe_select)
     }
   })
 
@@ -441,16 +453,155 @@ server <- function(input, output, session) {
     }
   })
 
-  # Clear form button
-  observeEvent(input$clear_form, {
+  # Function to load recipe data for editing
+  load_recipe_for_editing <- function(recipe_name) {
+    # Get all rows for this recipe
+    recipe_data <- master_list_data() %>%
+      filter(meal == recipe_name)
+
+    if (nrow(recipe_data) > 0) {
+      # Get recipe metadata (from first row)
+      first_row <- recipe_data[1, ]
+
+      # Update form fields
+      updateTextInput(session, "recipe_name", value = first_row$meal)
+      updateTextInput(session, "recipe_source", value = first_row$source)
+      updateSelectInput(session, "recipe_type", selected = first_row$type)
+      updateTextInput(session, "recipe_category", value = first_row$category)
+
+      # COMPLETELY clear the entire ingredient container and recreate it
+      removeUI(selector = "#ingredient_container", immediate = TRUE)
+
+      # Recreate the empty ingredient container
+      insertUI(
+        selector = "#ingredients_section",
+        where = "beforeEnd",
+        ui = div(id = "ingredient_container")
+      )
+
+      # Also remove any orphaned remove buttons that might exist
+      for (i in 1:100) {  # Remove buttons for IDs 1-100 to be safe
+        removeUI(selector = paste0("#remove_ingredient_", i), immediate = TRUE)
+      }
+
+      # Reset ingredients list completely
+      editor_state$ingredients <- list()
+      editor_state$ingredient_counter <- 0
+
+      # Create ingredient rows for each ingredient
+      for (i in 1:nrow(recipe_data)) {
+        ingredient <- recipe_data[i, ]
+        editor_state$ingredient_counter <- editor_state$ingredient_counter + 1
+
+        # Add to ingredients list
+        editor_state$ingredients <- append(editor_state$ingredients, list(
+          list(
+            id = editor_state$ingredient_counter,
+            section = ingredient$section,
+            name = ingredient$ingredient,
+            amount = ingredient$amount,
+            units = ingredient$units,
+            notes = ingredient$notes
+          )
+        ))
+
+        # Create UI row
+        insertUI(
+          selector = "#ingredient_container",
+          where = "beforeEnd",
+          ui = create_ingredient_row_with_values(
+            editor_state$ingredient_counter,
+            ingredient$section,
+            ingredient$ingredient,
+            ingredient$amount,
+            ingredient$units,
+            ingredient$notes
+          )
+        )
+      }
+
+      # Force a small delay to ensure UI updates
+      Sys.sleep(0.1)
+
+      # Update remove buttons
+      update_remove_buttons()
+    }
+  }
+
+  # Function to create ingredient row with pre-filled values
+  create_ingredient_row_with_values <- function(ingredient_id, section, name, amount, units, notes) {
+    fluidRow(
+      id = paste0("ingredient_row_", ingredient_id),
+      column(2,
+        selectInput(
+          inputId = paste0("ingredient_section_", ingredient_id),
+          label = "Section",
+          choices = all_sections(),
+          selected = section
+        )
+      ),
+      column(2,
+        textInput(
+          inputId = paste0("ingredient_name_", ingredient_id),
+          label = "Ingredient",
+          placeholder = "e.g., tomatoes",
+          value = name
+        )
+      ),
+      column(1,
+        numericInput(
+          inputId = paste0("ingredient_amount_", ingredient_id),
+          label = "Amount",
+          value = amount,
+          min = 0,
+          step = 0.1
+        )
+      ),
+      column(1,
+        textInput(
+          inputId = paste0("ingredient_units_", ingredient_id),
+          label = "Units",
+          placeholder = "e.g., items, g, ml",
+          value = units
+        )
+      ),
+      column(4,
+        textInput(
+          inputId = paste0("ingredient_notes_", ingredient_id),
+          label = "Notes",
+          placeholder = "e.g., substitute heavy coconut milk for evaporated milk",
+          value = notes
+        )
+      ),
+      column(1,
+        id = paste0("button_container_", ingredient_id),
+        br()
+      )
+    )
+  }
+
+  # Function to clear form
+  clear_form <- function() {
     # Reset form inputs
     updateTextInput(session, "recipe_name", value = "")
     updateTextInput(session, "recipe_source", value = "")
     updateSelectInput(session, "recipe_type", selected = "dinner")
     updateTextInput(session, "recipe_category", value = "")
 
-    # Clear all ingredient rows
-    removeUI(selector = "#ingredient_container > *", immediate = TRUE)
+    # COMPLETELY clear the entire ingredient container and recreate it
+    removeUI(selector = "#ingredient_container", immediate = TRUE)
+
+    # Recreate the empty ingredient container
+    insertUI(
+      selector = "#ingredients_section",
+      where = "beforeEnd",
+      ui = div(id = "ingredient_container")
+    )
+
+    # Also remove any orphaned remove buttons that might exist
+    for (i in 1:100) {  # Remove buttons for IDs 1-100 to be safe
+      removeUI(selector = paste0("#remove_ingredient_", i), immediate = TRUE)
+    }
 
     # Reset ingredients to single empty row
     editor_state$ingredient_counter <- 1
@@ -477,6 +628,11 @@ server <- function(input, output, session) {
 
     # Update remove buttons after clearing
     update_remove_buttons()
+  }
+
+  # Clear form button
+  observeEvent(input$clear_form, {
+    clear_form()
   })
 
 
@@ -540,51 +696,49 @@ server <- function(input, output, session) {
       )
     }))
 
-    # Add to master_list_data
+    # Get current data
     current_data <- master_list_data()
-    updated_data <- bind_rows(current_data, new_recipe_df)
+
+    # Handle editing vs adding
+    if (editor_state$mode == "edit" && !is.null(input$edit_recipe_select) && input$edit_recipe_select != "") {
+      # Editing mode: remove old recipe and add updated one
+      original_recipe_name <- input$edit_recipe_select
+
+      # Remove all rows for the original recipe
+      updated_data <- current_data %>%
+        filter(meal != original_recipe_name)
+
+      # Add the updated recipe
+      updated_data <- bind_rows(updated_data, new_recipe_df)
+
+      # Update the recipe selector to show the new name if it changed
+      if (input$recipe_name != original_recipe_name) {
+        # Update the dropdown choices
+        user_recipes <- updated_data %>%
+          distinct(meal) %>%
+          arrange(meal) %>%
+          pull(meal)
+
+        updateSelectInput(session, "edit_recipe_select",
+                         choices = c("Select a recipe..." = "", user_recipes),
+                         selected = input$recipe_name)
+      }
+
+      showNotification(paste("Recipe '", input$recipe_name, "' updated successfully!"), type = "message")
+    } else {
+      # Adding mode: just add the new recipe
+      updated_data <- bind_rows(current_data, new_recipe_df)
+      showNotification(paste("Recipe '", input$recipe_name, "' added successfully!"), type = "message")
+    }
+
+    # Update reactive data
     master_list_data(updated_data)
 
     # Save to CSV
     write_csv(updated_data, "master_list.csv")
 
-    # Show success message
-    showNotification(paste("Recipe '", input$recipe_name, "' saved successfully!"), type = "message")
-
     # Clear form
-    updateTextInput(session, "recipe_name", value = "")
-    updateTextInput(session, "recipe_source", value = "")
-    updateSelectInput(session, "recipe_type", selected = "dinner")
-    updateTextInput(session, "recipe_category", value = "")
-
-    # Clear all ingredient rows
-    removeUI(selector = "#ingredient_container > *", immediate = TRUE)
-
-    # Reset ingredients to single empty row
-    editor_state$ingredient_counter <- 1
-    editor_state$ingredients <- list(
-      list(
-        id = 1,
-        section = "produce",
-        name = "",
-        amount = 1,
-        units = "",
-        notes = ""
-      )
-    )
-
-    # Insert the first ingredient row
-    insertUI(
-      selector = "#ingredient_container",
-      where = "beforeEnd",
-      ui = create_ingredient_row(1)
-    )
-
-    # Force a small delay to ensure UI updates
-    Sys.sleep(0.1)
-
-    # Update remove buttons after clearing
-    update_remove_buttons()
+    clear_form()
   })
 
   # Update editor status with ingredient count
