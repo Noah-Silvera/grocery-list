@@ -163,50 +163,8 @@ ui <- navbarPage(
           h4("Ingredients"),
           p("Add ingredients for this recipe:"),
 
-          # Single static ingredient row (template)
-          div(id = "ingredient_template",
-            fluidRow(
-              column(3,
-                selectInput(
-                  inputId = "ingredient_section_1",
-                  label = "Section",
-                  choices = c("produce", "dairy", "pantry", "east pantry", "west pantry", "bulk barn", "frozen", "market"),
-                  selected = "produce"
-                )
-              ),
-              column(3,
-                textInput(
-                  inputId = "ingredient_name_1",
-                  label = "Ingredient",
-                  placeholder = "e.g., tomatoes"
-                )
-              ),
-              column(2,
-                numericInput(
-                  inputId = "ingredient_amount_1",
-                  label = "Amount",
-                  value = 1,
-                  min = 0,
-                  step = 0.1
-                )
-              ),
-              column(2,
-                textInput(
-                  inputId = "ingredient_units_1",
-                  label = "Units",
-                  placeholder = "e.g., items, g, ml"
-                )
-              ),
-              column(2,
-                br(),
-                actionButton(
-                  inputId = "remove_ingredient_1",
-                  label = "Remove",
-                  class = "btn-danger btn-sm"
-                )
-              )
-            )
-          ),
+          # Dynamic ingredient rows
+          uiOutput("ingredient_rows"),
 
           # Add ingredient button
           actionButton(
@@ -291,7 +249,8 @@ server <- function(input, output, session) {
   editor_state <- reactiveValues(
     mode = "add",
     selected_recipe = NULL,
-    ingredients = list()
+    ingredients = list(),
+    ingredient_counter = 0
   )
 
   # Get unique sections, types, and categories from existing data
@@ -319,16 +278,26 @@ server <- function(input, output, session) {
       sort()
   })
 
-  # Update section dropdown choices
-  observe({
-    updateSelectInput(session, "ingredient_section_1",
-                     choices = all_sections())
-  })
-
   # Update type dropdown choices
   observe({
     updateSelectInput(session, "recipe_type",
                      choices = all_types())
+  })
+
+  # Initialize with one ingredient row
+  observe({
+    if (length(editor_state$ingredients) == 0) {
+      editor_state$ingredient_counter <- 1
+      editor_state$ingredients <- list(
+        list(
+          id = 1,
+          section = "produce",
+          name = "",
+          amount = 1,
+          units = ""
+        )
+      )
+    }
   })
 
   # Handle mode switching - show/hide recipe selector
@@ -347,11 +316,109 @@ server <- function(input, output, session) {
     }
   })
 
-  # Placeholder for editor status (will be functional in later steps)
+  # Add ingredient button
+  observeEvent(input$add_ingredient, {
+    editor_state$ingredient_counter <- editor_state$ingredient_counter + 1
+    new_ingredient <- list(
+      id = editor_state$ingredient_counter,
+      section = "produce",
+      name = "",
+      amount = 1,
+      units = ""
+    )
+    editor_state$ingredients <- append(editor_state$ingredients, list(new_ingredient))
+  })
+
+  # Remove ingredient button (handled in renderUI)
+  observeEvent(input$remove_ingredient, {
+    ingredient_id <- as.numeric(input$remove_ingredient)
+    editor_state$ingredients <- editor_state$ingredients[!sapply(editor_state$ingredients, function(x) x$id == ingredient_id)]
+  })
+
+  # Clear form button
+  observeEvent(input$clear_form, {
+    # Reset form inputs
+    updateTextInput(session, "recipe_name", value = "")
+    updateTextInput(session, "recipe_source", value = "")
+    updateSelectInput(session, "recipe_type", selected = "dinner")
+    updateTextInput(session, "recipe_category", value = "")
+    updateTextAreaInput(session, "recipe_notes", value = "")
+
+    # Reset ingredients to single empty row
+    editor_state$ingredient_counter <- 1
+    editor_state$ingredients <- list(
+      list(
+        id = 1,
+        section = "produce",
+        name = "",
+        amount = 1,
+        units = ""
+      )
+    )
+  })
+
+  # Render dynamic ingredient rows
+  output$ingredient_rows <- renderUI({
+    if (length(editor_state$ingredients) == 0) return(NULL)
+
+    lapply(editor_state$ingredients, function(ingredient) {
+      fluidRow(
+        column(3,
+          selectInput(
+            inputId = paste0("ingredient_section_", ingredient$id),
+            label = "Section",
+            choices = all_sections(),
+            selected = ingredient$section
+          )
+        ),
+        column(3,
+          textInput(
+            inputId = paste0("ingredient_name_", ingredient$id),
+            label = "Ingredient",
+            placeholder = "e.g., tomatoes",
+            value = ingredient$name
+          )
+        ),
+        column(2,
+          numericInput(
+            inputId = paste0("ingredient_amount_", ingredient$id),
+            label = "Amount",
+            value = ingredient$amount,
+            min = 0,
+            step = 0.1
+          )
+        ),
+        column(2,
+          textInput(
+            inputId = paste0("ingredient_units_", ingredient$id),
+            label = "Units",
+            placeholder = "e.g., items, g, ml",
+            value = ingredient$units
+          )
+        ),
+        column(2,
+          br(),
+          if (length(editor_state$ingredients) > 1) {
+            actionButton(
+              inputId = "remove_ingredient",
+              label = "Remove",
+              class = "btn-danger btn-sm",
+              onclick = paste0("Shiny.setInputValue('remove_ingredient', ", ingredient$id, ", {priority: 'event'})")
+            )
+          } else {
+            div() # Empty div when only one ingredient
+          }
+        )
+      )
+    })
+  })
+
+  # Update editor status with ingredient count
   output$editor_status <- renderText({
+    ingredient_count <- length(editor_state$ingredients)
     paste("Mode:", input$editor_mode,
           if(input$editor_mode == "edit") paste("| Selected:", input$edit_recipe_select) else "",
-          "| Form ready for input")
+          "| Ingredients:", ingredient_count)
   })
 
 }
