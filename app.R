@@ -57,7 +57,10 @@ ui <- navbarPage(
           tags$a(href="https://github.com/meganbontrager/grocery-list", "edit on github")
         ),
         mainPanel(
+        h4("Selected Recipes"),
         tableOutput(outputId = "recipe_list"),
+        br(),
+        h4("Shopping List"),
         tableOutput(outputId = "ingredients")
                   )
       )
@@ -214,14 +217,18 @@ server <- function(input, output, session) {
   groceries <- eventReactive(input$masterclass, {
     current_master_list() %>%
       filter(meal %in% input$masterclass) %>%
-      group_by(section, ingredient, units) %>%
-      summarize(total = sum(amount)) %>%
+      group_by(section, ingredient, units, notes) %>%
+      summarize(total = sum(amount), .groups = "drop") %>%
       arrange(section, ingredient) %>%
-      ungroup() %>%
-      # would be nice to get grocery section in as headings
-      select(ingredient, total, units) %>%
-      mutate(items = str_c(ingredient, as.character(total), units, sep = " ")) %>%
-      select(items)
+      mutate(
+        items = str_c(ingredient, as.character(total), units, sep = " "),
+        notes_display = ifelse(
+          is.na(notes) | notes == "",
+          "",
+          notes
+        )
+      ) %>%
+      select(items, notes_display)
   })
 
   recipe_list <- eventReactive(input$masterclass, {
