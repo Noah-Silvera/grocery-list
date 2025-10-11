@@ -21,6 +21,34 @@ library(googlesheets4)
 master_list_data <- reactiveVal(read_csv("master_list.csv"))
 master_list_megan_data <- reactiveVal(read_csv("master_list_megan.csv"))
 
+# Function to load all CSV files from recipes folder
+load_recipes_from_folder <- function() {
+  recipes_folder <- "recipes"
+  if (dir.exists(recipes_folder)) {
+    csv_files <- list.files(recipes_folder, pattern = "\\.csv$", full.names = TRUE)
+    if (length(csv_files) > 0) {
+      # Read all CSV files and combine them
+      recipes_list <- map(csv_files, ~ {
+        tryCatch({
+          read_csv(.x, show_col_types = FALSE)
+        }, error = function(e) {
+          cat("Error reading", .x, ":", e$message, "\n")
+          NULL
+        })
+      })
+      # Remove any NULL entries (failed reads) and combine
+      recipes_list <- recipes_list[!map_lgl(recipes_list, is.null)]
+      if (length(recipes_list) > 0) {
+        return(bind_rows(recipes_list))
+      }
+    }
+  }
+  return(tibble())
+}
+
+# Load recipes from folder
+recipes_folder_data <- reactiveVal(load_recipes_from_folder())
+
 # Create a small table of recipe names and sources (reactive)
 recipe_names <- reactive({
   master_list_data() %>%
@@ -192,13 +220,22 @@ server <- function(input, output, session) {
                      choices = recipe_names()$meal)
   })
 
-  # Reactive to get the current master list (with or without Megan's recipes)
+  # Reactive to get the current master list (with or without Megan's recipes and recipes folder)
   current_master_list <- reactive({
+    base_data <- master_list_data()
+
+    # Add Megan's recipes if checkbox is checked
     if (input$include_megan) {
-      bind_rows(master_list_data(), master_list_megan_data())
-    } else {
-      master_list_data()
+      base_data <- bind_rows(base_data, master_list_megan_data())
     }
+
+    # Always add recipes from folder
+    recipes_folder_data <- recipes_folder_data()
+    if (nrow(recipes_folder_data) > 0) {
+      base_data <- bind_rows(base_data, recipes_folder_data)
+    }
+
+    return(base_data)
   })
 
   # Reactive to get the current recipe names
@@ -368,8 +405,8 @@ server <- function(input, output, session) {
     editor_state$mode <- input$editor_mode
 
     if (input$editor_mode == "edit") {
-      # Populate recipe dropdown with user's recipes (not Megan's)
-      user_recipes <- master_list_data() %>%
+      # Populate recipe dropdown with user's recipes (master_list + recipes folder, not Megan's)
+      user_recipes <- bind_rows(master_list_data(), recipes_folder_data()) %>%
         distinct(meal) %>%
         arrange(meal) %>%
         pull(meal)
@@ -468,8 +505,8 @@ server <- function(input, output, session) {
 
   # Function to load recipe data for editing
   load_recipe_for_editing <- function(recipe_name) {
-    # Get all rows for this recipe
-    recipe_data <- master_list_data() %>%
+    # Get all rows for this recipe from both master_list and recipes folder
+    recipe_data <- bind_rows(master_list_data(), recipes_folder_data()) %>%
       filter(meal == recipe_name)
 
     if (nrow(recipe_data) > 0) {
