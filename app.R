@@ -201,7 +201,7 @@ server <- function(input, output, session) {
   # Reactive to get the current recipe names
   current_recipe_names <- reactive({
     current_master_list() %>%
-      distinct(meal, source, notes) %>%
+      distinct(meal, source) %>%
       arrange(meal)
   })
 
@@ -227,7 +227,7 @@ server <- function(input, output, session) {
   recipe_list <- eventReactive(input$masterclass, {
     current_recipe_names() %>%
       filter(meal %in% input$masterclass) %>%
-      select(meal, source, notes) %>%
+      select(meal, source) %>%
       distinct()
   })
 
