@@ -25,33 +25,57 @@ recipe_names = master_list %>%
   distinct(meal, source, notes) %>%
   arrange(meal)
 
-ui <- fluidPage(
-  # App title
-  titlePanel("What are you making this week?"),
+ui <- navbarPage(
+  "Recipe Manager",
 
-  # Sidebar layout
-  sidebarLayout(
-    # A panel for inputs
-    sidebarPanel(
-      # Checkbox to include Megan's recipes
-      checkboxInput(
-        inputId = "include_megan",
-        label = "Include Megan's recipes",
-        value = FALSE
-      ),
-      # Use an input type that allows selection of multiple recipes
-      selectInput(
-        inputId = "masterclass",
-        label = "What are my options?",
-        choices  = recipe_names$meal,
-        multiple = TRUE
-      ),
-      tags$a(href="https://github.com/meganbontrager/grocery-list", "edit on github")
-    ),
-    mainPanel(
-    tableOutput(outputId = "recipe_list"),
-    tableOutput(outputId = "ingredients")
-              )
+  # Tab 1: Grocery List (existing functionality)
+  tabPanel("Grocery List",
+    fluidPage(
+      # App title
+      titlePanel("What are you making this week?"),
+
+      # Sidebar layout
+      sidebarLayout(
+        # A panel for inputs
+        sidebarPanel(
+          # Checkbox to include Megan's recipes
+          checkboxInput(
+            inputId = "include_megan",
+            label = "Include Megan's recipes",
+            value = FALSE
+          ),
+          # Use an input type that allows selection of multiple recipes
+          selectInput(
+            inputId = "masterclass",
+            label = "What are my options?",
+            choices  = recipe_names$meal,
+            multiple = TRUE
+          ),
+          tags$a(href="https://github.com/meganbontrager/grocery-list", "edit on github")
+        ),
+        mainPanel(
+        tableOutput(outputId = "recipe_list"),
+        tableOutput(outputId = "ingredients")
+                  )
+      )
+    )
+  ),
+
+  # Tab 2: Recipe Editor (placeholder for now)
+  tabPanel("Recipe Editor",
+    fluidPage(
+      titlePanel("Recipe Editor"),
+      mainPanel(
+        h3("Recipe Editor"),
+        p("This is where the recipe editor will be implemented."),
+        p("Features will include:"),
+        tags$ul(
+          tags$li("Add new recipes"),
+          tags$li("Edit existing recipes"),
+          tags$li("Manage ingredients")
+        )
+      )
+    )
   )
 )
 
