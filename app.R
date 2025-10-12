@@ -1,6 +1,7 @@
 #### RECIPE MASTER LIST ########
 library(tidyverse)
 library(shiny)
+library(shinyjs)
 library(googlesheets4)
 
 # shiny app basics from
@@ -30,7 +31,18 @@ load_recipes_from_folder <- function() {
       # Read all CSV files and combine them
       recipes_list <- map(csv_files, ~ {
         tryCatch({
-          read_csv(.x, show_col_types = FALSE)
+          # Read with consistent column types to avoid binding issues
+          read_csv(.x, show_col_types = FALSE, col_types = cols(
+            type = col_character(),
+            category = col_character(),
+            meal = col_character(),
+            source = col_character(),
+            section = col_character(),
+            ingredient = col_character(),
+            amount = col_double(),
+            units = col_character(),
+            notes = col_character()
+          ))
         }, error = function(e) {
           cat("Error reading", .x, ":", e$message, "\n")
           NULL
@@ -58,6 +70,7 @@ recipe_names <- reactive({
 
 ui <- navbarPage(
   "Recipe Manager",
+  useShinyjs(),
 
   # Tab 1: Grocery List (existing functionality)
   tabPanel("Grocery List",
@@ -88,7 +101,15 @@ ui <- navbarPage(
         h4("Selected Recipes"),
         tableOutput(outputId = "recipe_list"),
         br(),
-        h4("Shopping List"),
+        div(style = "display: flex; align-items: center; gap: 10px; margin-bottom: 10px;",
+          h4("Shopping List", style = "margin: 0;"),
+          actionButton(
+            inputId = "copy_list",
+            label = "📋 Copy List",
+            class = "btn btn-sm btn-outline-primary",
+            style = "font-size: 14px; padding: 8px 16px; min-height: 44px; touch-action: manipulation;"
+          )
+        ),
         tableOutput(outputId = "ingredients")
                   )
       )
@@ -281,6 +302,72 @@ server <- function(input, output, session) {
 
   output$recipe_list <- renderTable({
     recipe_list()
+  })
+
+  # Create formatted grocery list text for copying
+  grocery_list_text <- reactive({
+    if (nrow(groceries()) == 0) {
+      return("No items in shopping list")
+    }
+
+    # Format each item as "ingredient + amount + units" with notes if available
+    items <- groceries() %>%
+      mutate(
+        formatted_item = case_when(
+          !is.na(notes_display) & notes_display != "" ~ paste0(items, " (", notes_display, ")"),
+          TRUE ~ items
+        )
+      ) %>%
+      pull(formatted_item)
+
+    return(paste(items, collapse = "\n"))
+  })
+
+  # Handle copy button click
+  observeEvent(input$copy_list, {
+    # Get the formatted text
+    text_to_copy <- grocery_list_text()
+
+    # Create JavaScript to copy to clipboard
+    js_code <- paste0("
+      navigator.clipboard.writeText(`", text_to_copy, "`).then(function() {
+        // Show success message
+        var button = document.getElementById('copy_list');
+        var originalText = button.innerHTML;
+        button.innerHTML = '✅ Copied!';
+        button.style.backgroundColor = '#28a745';
+        button.style.color = 'white';
+
+        setTimeout(function() {
+          button.innerHTML = originalText;
+          button.style.backgroundColor = '';
+          button.style.color = '';
+        }, 2000);
+      }).catch(function(err) {
+        // Fallback for older browsers
+        var textArea = document.createElement('textarea');
+        textArea.value = `", text_to_copy, "`;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        var button = document.getElementById('copy_list');
+        var originalText = button.innerHTML;
+        button.innerHTML = '✅ Copied!';
+        button.style.backgroundColor = '#28a745';
+        button.style.color = 'white';
+
+        setTimeout(function() {
+          button.innerHTML = originalText;
+          button.style.backgroundColor = '';
+          button.style.color = '';
+        }, 2000);
+      });
+    ")
+
+    # Execute the JavaScript
+    shinyjs::runjs(js_code)
   })
 
   # Recipe Editor server logic
