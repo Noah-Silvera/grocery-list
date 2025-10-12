@@ -1,0 +1,6 @@
+type,category,meal,source,section,ingredient,amount,units,notes
+dinner,pasta,gluten-free potato gnocchi,https://glutenfreeonashoestring.com/gluten-free-potato-gnocchi/,produce,russet potatoes,2,lbs,Unpeeled
+dinner,pasta,gluten-free potato gnocchi,https://glutenfreeonashoestring.com/gluten-free-potato-gnocchi/,dairy,unsalted butter,2,T,Melted and cooled
+dinner,pasta,gluten-free potato gnocchi,https://glutenfreeonashoestring.com/gluten-free-potato-gnocchi/,pantry,kosher salt,0.5,tsp,
+dinner,pasta,gluten-free potato gnocchi,https://glutenfreeonashoestring.com/gluten-free-potato-gnocchi/,pantry,all-purpose gluten-free flour blend,1,c,With xanthan gum
+dinner,pasta,gluten-free potato gnocchi,https://glutenfreeonashoestring.com/gluten-free-potato-gnocchi/,pantry,xanthan gum,0.625,tsp,Omit if flour blend contains it

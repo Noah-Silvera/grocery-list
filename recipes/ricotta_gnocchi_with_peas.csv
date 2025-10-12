@@ -1,0 +1,6 @@
+type,category,meal,source,section,ingredient,amount,units,notes
+dinner,pasta,ricotta gnocchi with peas,https://www.bonappetit.com/recipe/ricotta-gnocchi,dairy,pre-grated parmesan,0.5,c,Plus more for serving
+dinner,pasta,ricotta gnocchi with peas,https://www.bonappetit.com/recipe/ricotta-gnocchi,pantry,all-purpose flour,1,c,Plus more
+dinner,pasta,ricotta gnocchi with peas,https://www.bonappetit.com/recipe/ricotta-gnocchi,pantry,frozen peas,10,oz,
+dinner,pasta,ricotta gnocchi with peas,https://www.bonappetit.com/recipe/ricotta-gnocchi,produce,lemon,1,items,
+dinner,pasta,ricotta gnocchi with peas,https://www.bonappetit.com/recipe/ricotta-gnocchi,produce,dill/basil/chives,1/2 c,items,
