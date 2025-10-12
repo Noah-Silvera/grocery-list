@@ -108,6 +108,12 @@ ui <- navbarPage(
             label = "📋 Copy List",
             class = "btn btn-sm btn-outline-primary",
             style = "font-size: 14px; padding: 8px 16px; min-height: 44px; touch-action: manipulation;"
+          ),
+          actionButton(
+            inputId = "add_to_grocery_list",
+            label = "🛒 Add to Grocery List",
+            class = "btn btn-sm btn-outline-success",
+            style = "font-size: 14px; padding: 8px 16px; min-height: 44px; touch-action: manipulation;"
           )
         ),
         tableOutput(outputId = "ingredients")
@@ -364,6 +370,41 @@ server <- function(input, output, session) {
           button.style.color = '';
         }, 2000);
       });
+    ")
+
+    # Execute the JavaScript
+    shinyjs::runjs(js_code)
+  })
+
+  # Handle Shortcuts app button click
+  observeEvent(input$add_to_grocery_list, {
+    # Get the formatted text
+    text_to_copy <- grocery_list_text()
+
+    # Create JavaScript to open Shortcuts app with URL-encoded grocery list
+    js_code <- paste0("
+      // URL encode the grocery list text
+      var groceryText = `", text_to_copy, "`;
+      var encodedText = encodeURIComponent(groceryText);
+
+      // Create the Shortcuts URL with the encoded text as input
+      var shortcutsUrl = 'shortcuts://run-shortcut?name=Bulk%20Add%20Groceries&input=text&text=' + encodedText;
+
+      // Open Shortcuts app with the grocery list as input
+      window.location.href = shortcutsUrl;
+
+      // Show success message
+      var button = document.getElementById('add_to_grocery_list');
+      var originalText = button.innerHTML;
+      button.innerHTML = '✅ Opening Shortcuts...';
+      button.style.backgroundColor = '#28a745';
+      button.style.color = 'white';
+
+      setTimeout(function() {
+        button.innerHTML = originalText;
+        button.style.backgroundColor = '';
+        button.style.color = '';
+      }, 3000);
     ")
 
     # Execute the JavaScript
