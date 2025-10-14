@@ -18,48 +18,112 @@ library(googlesheets4)
 # unit: what unit of measurement (this is set up to be consistent within an ingredient)
 # notes: shopping notes (not used currently)
 
-# Load data into reactive values for dynamic updates
-master_list_data <- reactiveVal(read_csv("master_list.csv"))
-master_list_megan_data <- reactiveVal(read_csv("master_list_megan.csv"))
+# Strict CSV validation and fail-fast preload
+expected_recipe_columns <- c(
+  "type", "category", "meal", "source", "section",
+  "ingredient", "amount", "units", "notes"
+)
 
-# Function to load all CSV files from recipes folder
-load_recipes_from_folder <- function() {
-  recipes_folder <- "recipes"
-  if (dir.exists(recipes_folder)) {
-    csv_files <- list.files(recipes_folder, pattern = "\\.csv$", full.names = TRUE)
-    if (length(csv_files) > 0) {
-      # Read all CSV files and combine them
-      recipes_list <- map(csv_files, ~ {
-        tryCatch({
-          # Read with consistent column types to avoid binding issues
-          read_csv(.x, show_col_types = FALSE, col_types = cols(
-            type = col_character(),
-            category = col_character(),
-            meal = col_character(),
-            source = col_character(),
-            section = col_character(),
-            ingredient = col_character(),
-            amount = col_double(),
-            units = col_character(),
-            notes = col_character()
-          ))
-        }, error = function(e) {
-          cat("Error reading", .x, ":", e$message, "\n")
-          NULL
-        })
-      })
-      # Remove any NULL entries (failed reads) and combine
-      recipes_list <- recipes_list[!map_lgl(recipes_list, is.null)]
-      if (length(recipes_list) > 0) {
-        return(bind_rows(recipes_list))
-      }
-    }
-  }
-  return(tibble())
+read_csv_with_schema <- function(path) {
+  read_csv(
+    path,
+    show_col_types = FALSE,
+    col_types = cols(
+      type = col_character(),
+      category = col_character(),
+      meal = col_character(),
+      source = col_character(),
+      section = col_character(),
+      ingredient = col_character(),
+      amount = col_double(),
+      units = col_character(),
+      notes = col_character()
+    )
+  )
 }
 
-# Load recipes from folder
-recipes_folder_data <- reactiveVal(load_recipes_from_folder())
+validation_errors <- character(0)
+
+validate_frame <- function(df, file_label) {
+  missing_cols <- setdiff(expected_recipe_columns, names(df))
+  if (length(missing_cols) > 0) {
+    validation_errors <<- c(
+      validation_errors,
+      paste0(
+        file_label,
+        ": Missing required columns: ",
+        paste(missing_cols, collapse = ", ")
+      )
+    )
+  }
+
+  probs <- tryCatch(readr::problems(df), error = function(e) NULL)
+  if (!is.null(probs) && nrow(probs) > 0) {
+    head_rows <- head(probs, 5)
+    msg <- paste(
+      apply(head_rows[, c("row", "col", "expected", "actual")], 1, function(r) {
+        paste0("row ", r[["row"]], ", col ", r[["col"]], ": expected ", r[["expected"]], ", got ", r[["actual"]])
+      }),
+      collapse = "; "
+    )
+    validation_errors <<- c(
+      validation_errors,
+      paste0(file_label, ": Parse problems detected (showing up to 5): ", msg)
+    )
+  }
+}
+
+load_and_validate_csv <- function(path) {
+  df <- tryCatch({
+    read_csv_with_schema(path)
+  }, error = function(e) {
+    validation_errors <<- c(validation_errors, paste0(path, ": ", conditionMessage(e)))
+    return(NULL)
+  })
+  if (!is.null(df)) validate_frame(df, path)
+  df
+}
+
+load_recipes_from_folder_strict <- function() {
+  folder <- "recipes"
+  if (!dir.exists(folder)) return(tibble())
+  files <- list.files(folder, pattern = "\\.csv$", full.names = TRUE)
+  if (length(files) == 0) return(tibble())
+
+  dfs <- map(files, function(f) {
+    df <- tryCatch({
+      read_csv_with_schema(f)
+    }, error = function(e) {
+      validation_errors <<- c(validation_errors, paste0(f, ": ", conditionMessage(e)))
+      return(NULL)
+    })
+    if (!is.null(df)) validate_frame(df, f)
+    df
+  })
+
+  dfs <- dfs[!map_lgl(dfs, is.null)]
+  if (length(dfs) == 0) return(tibble())
+  bind_rows(dfs)
+}
+
+# Preload and validate all CSVs before building reactives
+preloaded_master_list <- load_and_validate_csv("master_list.csv")
+preloaded_master_list_megan <- load_and_validate_csv("master_list_megan.csv")
+preloaded_recipes_folder <- load_recipes_from_folder_strict()
+
+if (length(validation_errors) > 0) {
+  stop(
+    paste0(
+      "CSV validation failed. Please fix the following issues before starting the app:\n\n",
+      paste("- ", validation_errors, collapse = "\n")
+    )
+  )
+}
+
+# Load data into reactive values for dynamic updates from validated frames
+master_list_data <- reactiveVal(preloaded_master_list)
+master_list_megan_data <- reactiveVal(preloaded_master_list_megan)
+recipes_folder_data <- reactiveVal(preloaded_recipes_folder)
 
 # Create a small table of recipe names and sources (reactive)
 recipe_names <- reactive({
