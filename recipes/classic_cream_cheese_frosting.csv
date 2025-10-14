@@ -1,6 +1,6 @@
 type,category,meal,source,section,ingredient,amount,units,notes
 dessert,dessert,classic cream cheese frosting,Dessert Person Cookbook p.324,dairy,unsalted butter,2,sticks,Room temperature
-dessert,dessert,classic cream cheese frosting,Dessert Person Cookbook p.324,dairy,cream cheese,1,lb,Full-fat, preferably Philadelphia, room temperature
+dessert,dessert,classic cream cheese frosting,Dessert Person Cookbook p.324,dairy,cream cheese,1,lb,Full-fat -preferably Philadelphia -room temperature
 dessert,dessert,classic cream cheese frosting,Dessert Person Cookbook p.324,pantry,kosher salt,1,pinch,Generous
 dessert,dessert,classic cream cheese frosting,Dessert Person Cookbook p.324,pantry,powdered sugar,1,lb,About 3¾ cups
 dessert,dessert,classic cream cheese frosting,Dessert Person Cookbook p.324,pantry,vanilla extract,2,tsp,Or seeds scraped from 1 vanilla bean
