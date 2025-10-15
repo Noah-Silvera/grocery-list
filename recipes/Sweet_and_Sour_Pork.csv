@@ -1,0 +1,22 @@
+type,category,meal,source,section,ingredient,amount,units,notes
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",main protein,soy chunks,600,g,used instead of pork
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",marinade,soy sauce,1,tbsp,all-purpose
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",marinade,garlic,1,tbsp,freshly minced
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",marinade,ginger,1,tsp,freshly minced
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",marinade,cornstarch,0.25,tsp,instead of bicarbonate of soda
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",marinade,sea salt,0.5,tsp,flakes
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",marinade,black pepper,0.25,tsp,cracked
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",coating,cornstarch,0.5,cup,used instead of egg and flour
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",sauce,cornstarch,1,tbsp,
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",sauce,water,1,tbsp,
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",sauce,soy sauce,1,tbsp,all-purpose
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",sauce,brown sugar,0.25,cup,
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",sauce,pineapple juice,0.25,cup,from canned pineapple
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",sauce,apple cider vinegar,0.33,cup,or rice wine vinegar
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",sauce,tomato ketchup,0.33,cup,
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",vegetables,brown onion,1,whole,diced
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",vegetables,red onion,1,whole,diced
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",vegetables,red bell pepper,1,whole,diced
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",vegetables,green bell pepper,1,whole,diced
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",vegetables,pineapple chunks,0.5,cup,canned -drained
+dinner,Chinese,Sweet and Sour "Pork","https://www.madewithlau.com/recipes/sweet-sour-pork; City Recipe Collection",,Jasmine Rice,1,items,serve with
