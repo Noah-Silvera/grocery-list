@@ -1,1 +1,1 @@
-echo "library(rsconnect); deployApp(); quit();" | R --no-save
+git push -f && echo "library(rsconnect); deployApp(); quit();" | R --no-save
