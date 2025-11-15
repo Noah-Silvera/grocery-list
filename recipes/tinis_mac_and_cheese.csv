@@ -1,0 +1,15 @@
+type,source,section,meal,category,ingredient,amount,units,notes
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,main,Tini's Mac and Cheese,Pasta,Cavatappi,1,lb,or elbow macaroni
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,main,Tini's Mac and Cheese,Cheese,Mozzarella,1,lb,freshly grated
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,main,Tini's Mac and Cheese,Cheese,Colby Jack,1,lb,freshly grated
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,main,Tini's Mac and Cheese,Cheese,Sharp Cheddar,8,oz,freshly grated
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,seasoning,Tini's Mac and Cheese,Seasoning,Garlic Powder,1,tsp,
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,seasoning,Tini's Mac and Cheese,Seasoning,Smoked Paprika,1,tsp,
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,seasoning,Tini's Mac and Cheese,Seasoning,Coarse Salt,1,tsp,
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,seasoning,Tini's Mac and Cheese,Seasoning,Black Pepper,0.5,tsp,ground
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,base,Tini's Mac and Cheese,Fat,Butter,3,tbsp,salted
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,base,Tini's Mac and Cheese,Flour,All-Purpose Flour,3,tbsp,
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,liquid,Tini's Mac and Cheese,Liquid,Evaporated Milk,12,oz,1 can
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,liquid,Tini's Mac and Cheese,Liquid,Heavy Cream,2,cups,
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,seasoning,Tini's Mac and Cheese,Seasoning,Dijon Mustard,1,tbsp,
+main_dish,https://www.sugarandsoul.co/tinis-mac-and-cheese/,garnish,Tini's Mac and Cheese,Garnish,Fresh Parsley,1,tbsp,chopped (optional)
