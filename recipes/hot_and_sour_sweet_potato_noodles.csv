@@ -1,13 +1,26 @@
 type,category,meal,source,section,ingredient,amount,units,notes
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,sweet potato noodles,200,g,
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,cooking oil,1,tsp,
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,bulk barn,roasted peanuts,2,T,Coarsely ground
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,produce,green onions,2,sprigs,Thinly sliced
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,soy sauce,4,tsp,
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,chinese black vinegar,4,tsp,
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,sugar,2,tsp,
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,sesame oil,3,tsp,
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,produce,garlic,2,tsp,Finely chopped
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,dried red chili peppers,2,items,Coarsely chopped
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,sichuan peppercorn powder,2,tsp,Freshly ground preferred
-dinner,noodles,hot and sour sweet potato noodles,https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,pantry,salt,1,pinch,To taste
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,sweet potato starch noodles,100,g,dried
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,bean sprouts,30,g,fresh
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,chicken or vegetable stock,300,ml,see note
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,ginger,1,tsp,grated
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,garlic,1,clove,grated
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,light soy sauce,1,tbsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,Chinese black vinegar,2,tbsp,Chinkiang or Baoning
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,chili oil,1.5,tbsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,Sichuan pepper oil,0.5,tsp,or 1/4 tsp ground Sichuan pepper
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,white pepper,0.25,tsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,salt,0.125,tsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,sugar,0.5,tsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,fried soy beans,1,tbsp,see note
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,fried or roasted peanuts,1,tbsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,zha cai,1,tbsp,Chinese pickled mustard stem
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,scallion,1,serving,chopped
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Main Dish,cilantro,1,serving,chopped
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,veggie ground round,200,g,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,ginger,1,tbsp,minced
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,white pepper,0.5,tsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,Shaoxing wine,1,tbsp,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,sweet flour sauce,1,tbsp,tian mian jiang
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,dark soy sauce,1,tsp,can substitute with molasses + brown sugar + soy sauce
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,stock or water,150,ml,
+recipe,main,Hot and Sour Sweet Potato Noodles (Suan La Fen),https://chillcrispbyxueci.substack.com/p/hot-and-sour-sweet-potato-noodles,Zajiang Meat Sauce,vegetable oil,1,serving,
