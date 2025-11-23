@@ -1,0 +1,16 @@
+type,category,meal,source,section,ingredient,amount,units,notes
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Legume,dried chickpeas,0.25,cups,250 g
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Vegetable,onion,80,g,finely chopped (1/2 cup / 80 g in total)
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Seasoning,garlic,1,clove,crushed
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Herb,flat-leaf parsley,1,tbsp,finely chopped
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Herb,cilantro,2,tbsp,finely chopped
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Spice,cayenne pepper,0.25,tsp,
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Spice,ground cumin,0.5,tsp,
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Spice,ground coriander,0.25,tsp,
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Spice,ground cardamom,0.25,tsp,
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Leavening,baking powder,0.5,tsp,
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Liquid,water,3,tbsp,
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Flour,all-purpose flour,1.5,tbsp,
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Oil,sunflower oil,3,cups,750 ml for deep-frying
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Seed,sesame seeds,0.5,tsp,for coating
+Middle Eastern,Main Dish,Falafel,Jerusalem - A Cookbook pg.99,Seasoning,salt,,to taste,

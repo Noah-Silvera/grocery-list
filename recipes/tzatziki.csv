@@ -1,0 +1,9 @@
+type,category,meal,source,section,ingredient,amount,units,notes
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Base,Greek yogurt,2,cups,500 g
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Seasoning,garlic,1,clove,crushed
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Spice,cayenne pepper,1,pinch,
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Herb,dried mint,1,tbsp,
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Herb,fresh mint,2,tbsp,chopped
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Acid,lemon juice,2,tbsp,freshly squeezed
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Seasoning,salt,0.5,tsp,
+Middle Eastern,Sauce,Tzatziki,Jerusalem - a cookbook pg. 299,Spice,white pepper,0.25,tsp,
