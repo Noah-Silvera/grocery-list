@@ -1,0 +1,9 @@
+type,category,meal,source,section,ingredient,amount,units,notes
+smoothie,beverage,Juniper's Favourite Smoothie,,base,ice,1,cup,optional
+smoothie,beverage,Juniper's Favourite Smoothie,,base,kale,2,cups,packed (fresh or frozen)
+smoothie,beverage,Juniper's Favourite Smoothie,,base,mango,1,cup,ripe frozen cubes
+smoothie,beverage,Juniper's Favourite Smoothie,,base,pineapple or peach,1,cup,ripe frozen
+smoothie,beverage,Juniper's Favourite Smoothie,,base,ginger,1,Tbsp,minced fresh
+smoothie,beverage,Juniper's Favourite Smoothie,,base,lemon/lime,1.5,whole,or 2 whole
+smoothie,beverage,Juniper's Favourite Smoothie,,liquid,water,1.5,cups,filtered
+smoothie,beverage,Juniper's Favourite Smoothie,,sweetener,maple syrup,1,Tbsp,optional (depending on fruit sweetness)
